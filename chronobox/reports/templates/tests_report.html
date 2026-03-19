@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Tests Report{% endblock %}
+{% block header_title %}{{ title | default('Statistical Tests Report') }}{% endblock %}
+
+{% block content %}
+{% if tables and tables.tests %}
+<section id="section-tests" class="cb-section">
+    <h2>Test Results Summary</h2>
+    <table class="cb-table">
+        <thead>
+            <tr><th>Test</th><th>Statistic</th><th>p-value</th><th>Conclusion</th></tr>
+        </thead>
+        <tbody>
+            {% for test in tables.tests %}
+            <tr>
+                <td>{{ test.test }}</td>
+                <td class="num">{{ test.get('statistic', '---') | format_number(4) if test.get('statistic') is not none else '---' }}</td>
+                <td class="num">{{ test.get('p_value', '---') | format_pvalue if test.get('p_value') is not none else '---' }}</td>
+                <td>{{ test.get('conclusion', '---') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endif %}
+
+{% if conclusions %}
+<section id="section-conclusions" class="cb-section">
+    <h2>Conclusions</h2>
+    <div>{{ conclusions }}</div>
+</section>
+{% endif %}
+
+{{ super() }}
+{% endblock %}

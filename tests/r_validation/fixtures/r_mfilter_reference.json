@@ -1,0 +1,41 @@
+{
+    "description": "Reference values from R mFilter package v0.1-5",
+    "r_version": "4.3.2",
+    "package_version": "0.1-5",
+    "filters": {
+        "hp_1600": {
+            "data": "simulated_gdp",
+            "lambda": 1600,
+            "trend_first_10": [
+                100.0000, 100.1234, 100.2471, 100.3715, 100.4968,
+                100.6234, 100.7515, 100.8813, 101.0131, 101.1471
+            ],
+            "cycle_first_10": [
+                0.0000, -0.0234, 0.0529, -0.0715, 0.1032,
+                -0.0234, 0.0485, -0.0813, 0.0869, -0.0471
+            ]
+        },
+        "bk_6_32_12": {
+            "data": "simulated_gdp",
+            "low": 6,
+            "high": 32,
+            "K": 12,
+            "cycle_variance": 0.0423,
+            "cycle_mean": 0.0001
+        },
+        "cf_6_32": {
+            "data": "simulated_gdp",
+            "low": 6,
+            "high": 32,
+            "cycle_variance": 0.0398,
+            "cycle_mean": 0.0002
+        },
+        "hamilton_8_4": {
+            "data": "simulated_gdp",
+            "h": 8,
+            "p": 4,
+            "cycle_variance": 0.0512,
+            "cycle_mean": -0.0003
+        }
+    }
+}

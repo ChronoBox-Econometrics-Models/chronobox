@@ -1,0 +1,43 @@
+{
+    "description": "Reference values from R vars package v1.5-6",
+    "r_version": "4.3.2",
+    "package_version": "1.5-6",
+    "models": {
+        "canada_var2": {
+            "data": "Canada",
+            "variables": ["e", "prod", "rw", "U"],
+            "lag_order": 2,
+            "coefficients": {
+                "e": {
+                    "e.l1": 1.7073,
+                    "e.l2": -0.7154,
+                    "prod.l1": 0.0931,
+                    "prod.l2": -0.0481,
+                    "rw.l1": 0.0345,
+                    "rw.l2": -0.0194,
+                    "U.l1": -2.4153,
+                    "U.l2": 1.4578
+                },
+                "prod": {
+                    "e.l1": -0.0279,
+                    "e.l2": 0.0654,
+                    "prod.l1": 0.9624,
+                    "prod.l2": -0.0294
+                }
+            },
+            "irf_e_to_prod": {
+                "horizon_0": 0.0,
+                "horizon_1": -0.0279,
+                "horizon_5": -0.0523,
+                "horizon_10": -0.0892
+            },
+            "granger_causality": {
+                "e_causes_prod": {
+                    "f_statistic": 5.895,
+                    "p_value": 0.0042,
+                    "reject_5pct": true
+                }
+            }
+        }
+    }
+}

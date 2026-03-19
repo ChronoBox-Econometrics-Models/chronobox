@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}SVAR Report{% endblock %}
+{% block header_title %}{{ title | default('Structural VAR Report') }}{% endblock %}
+
+{% block content %}
+{{ super() }}
+
+{% if hd %}
+<section id="section-hd" class="cb-section">
+    <h2>Historical Decomposition</h2>
+    <p>Historical decomposition is available for this model.</p>
+</section>
+{% endif %}
+{% endblock %}

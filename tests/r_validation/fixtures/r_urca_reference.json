@@ -1,0 +1,61 @@
+{
+    "description": "Reference values from R urca package v1.3-3",
+    "r_version": "4.3.2",
+    "package_version": "1.3-3",
+    "tests": {
+        "airline_adf": {
+            "data": "AirPassengers",
+            "test_type": "ADF",
+            "lags": 13,
+            "statistic": 0.815,
+            "critical_values": {
+                "1pct": -3.48,
+                "5pct": -2.88,
+                "10pct": -2.58
+            },
+            "reject_5pct": false
+        },
+        "airline_pp": {
+            "data": "AirPassengers",
+            "test_type": "Phillips-Perron",
+            "statistic": -1.844,
+            "critical_values": {
+                "1pct": -3.48,
+                "5pct": -2.88,
+                "10pct": -2.58
+            },
+            "reject_5pct": false
+        },
+        "airline_kpss": {
+            "data": "AirPassengers",
+            "test_type": "KPSS",
+            "statistic": 2.739,
+            "critical_values": {
+                "10pct": 0.347,
+                "5pct": 0.463,
+                "2.5pct": 0.574,
+                "1pct": 0.739
+            },
+            "reject_5pct": true
+        },
+        "airline_ers": {
+            "data": "AirPassengers",
+            "test_type": "ERS (DF-GLS)",
+            "statistic": -1.82,
+            "critical_values": {
+                "1pct": -3.48,
+                "5pct": -2.89,
+                "10pct": -2.57
+            },
+            "reject_5pct": false
+        },
+        "canada_johansen": {
+            "data": "Canada",
+            "test_type": "Johansen Trace",
+            "k": 4,
+            "trace_statistics": [76.72, 41.19, 21.73, 7.92],
+            "critical_values_5pct": [53.12, 34.91, 19.96, 9.24],
+            "rank": 3
+        }
+    }
+}

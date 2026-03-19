@@ -1,0 +1,44 @@
+# Ruff configuration for ChronoBox
+target-version = "py311"
+line-length = 100
+fix = true
+
+[lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "D",    # pydocstyle
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff-specific
+]
+ignore = [
+    "D100",  # Missing docstring in public module
+    "D104",  # Missing docstring in public package
+    "D105",  # Missing docstring in magic method
+    "D203",  # one-blank-line-before-class (conflicts with D211)
+    "D213",  # multi-line-summary-second-line (conflicts with D212)
+    "D401",  # First line should be in imperative mood (too strict for scientific docs)
+    "N802",  # Function name should be lowercase (math conventions: T, K, etc.)
+    "N803",  # Argument name should be lowercase (math conventions)
+    "N806",  # Variable in function should be lowercase (math conventions: T, K, H, etc.)
+    "N811",  # Constant imported as non-constant
+    "TCH",   # flake8-type-checking (overly pedantic for scientific code)
+    "E501",   # Line too long (handled by formatter)
+    "RUF059", # Unused unpacked variable (common in tuple unpacking)
+    "SIM105", # contextlib.suppress instead of try-except-pass (clearer with try/except)
+]
+
+[lint.per-file-ignores]
+"tests/**/*.py" = ["D", "S101"]
+"scripts/**/*.py" = ["D"]
+
+[lint.isort]
+known-first-party = ["chronobox"]
+
+[lint.pydocstyle]
+convention = "numpy"

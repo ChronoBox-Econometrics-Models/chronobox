@@ -1,0 +1,145 @@
+[build-system]
+requires = ["hatchling>=1.18,<1.22"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chronobox"
+dynamic = ["version"]
+description = "Time series analysis library with ARIMA, state-space models, and automatic model selection"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    { name = "NodesEcon" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "kalmanbox",
+    "matplotlib>=3.7",
+]
+
+[project.scripts]
+chronobox = "chronobox.cli.main:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.4",
+    "pyright>=1.1",
+    "hypothesis>=6.0",
+    "bandit>=1.7",
+    "safety>=2.3",
+    "radon>=6.0",
+    "interrogate>=1.5",
+    "mutmut>=2.4",
+    "pre-commit>=3.0",
+    "structlog>=23.0",
+    "mkdocs-material>=9.0",
+    "mkdocstrings[python]>=0.24",
+]
+numba = [
+    "numba>=0.57",
+]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "logs/",
+    "htmlcov/",
+    "site/",
+    "docs/",
+    ".github/",
+    "tests/",
+    ".venv/",
+    "*.egg-info/",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["chronobox"]
+
+[tool.hatch.version]
+path = "chronobox/__version__.py"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+    "--cov=chronobox",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "--cov-fail-under=90",
+    "-v",
+    "--tb=short",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks integration tests",
+]
+
+[tool.coverage.run]
+source = ["chronobox"]
+omit = [
+    "chronobox/datasets/scripts/*",
+    "chronobox/cli/*",
+    "chronobox/utils/numba_core.py",
+    "chronobox/visualization/*",
+    "chronobox/decomposition/x13_wrapper.py",
+    "chronobox/selection/auto_ets.py",
+    "chronobox/reports/template_manager.py",
+    "chronobox/reports/transformers/*",
+    "chronobox/reports/report_manager.py",
+    "chronobox/models/favar.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if __name__ == .__main__.",
+    "raise NotImplementedError",
+    "pass",
+    "except ImportError",
+    "if TYPE_CHECKING:",
+    "@overload",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM"]
+
+[tool.pyright]
+pythonVersion = "3.11"
+typeCheckingMode = "basic"
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = ["B101", "B110", "B112", "B301", "B310", "B403", "B404", "B603", "B615"]
+
+[tool.interrogate]
+ignore-init-method = true
+ignore-init-module = true
+ignore-magic = true
+ignore-semiprivate = false
+ignore-private = false
+ignore-property-decorators = false
+ignore-module = true
+fail-under = 95
+verbose = 1
+
+[tool.mutmut]
+paths_to_mutate = "chronobox/core/"
+tests_dir = "tests/"
+runner = "python -m pytest"

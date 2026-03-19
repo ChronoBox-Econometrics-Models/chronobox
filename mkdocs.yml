@@ -1,0 +1,141 @@
+site_name: ChronoBox
+site_description: "Time series analysis library for Python with ARIMA, VAR, SVAR, VECM, and more"
+site_author: NodesEcon
+site_url: https://nodesecon.github.io/chronobox/
+
+repo_name: nodesecon/chronobox
+repo_url: https://github.com/nodesecon/chronobox
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            show_source: true
+            show_root_heading: true
+            show_category_heading: true
+            members_order: source
+  - autorefs
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nodesecon/chronobox
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/chronobox/
+  version:
+    provider: mike
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Concepts: getting-started/concepts.md
+  - User Guide:
+    - ARIMA & SARIMA: user-guide/arima.md
+    - Auto-ARIMA: user-guide/auto-arima.md
+    - VAR: user-guide/var.md
+    - SVAR: user-guide/svar.md
+    - VECM: user-guide/vecm.md
+    - ARDL: user-guide/ardl.md
+    - Unit Root Tests: user-guide/unit-root-tests.md
+    - Cointegration Tests: user-guide/cointegration-tests.md
+    - Diagnostic Tests: user-guide/diagnostic-tests.md
+    - HP Filter: user-guide/hp-filter.md
+    - BK Filter: user-guide/bk-filter.md
+    - CF Filter: user-guide/cf-filter.md
+    - Hamilton Filter: user-guide/hamilton-filter.md
+    - Decomposition: user-guide/decomposition.md
+    - Visualization: user-guide/visualization.md
+    - Reports: user-guide/reports.md
+    - ChronoExperiment: user-guide/experiment.md
+    - Datasets: user-guide/datasets.md
+    - CLI: user-guide/cli.md
+    - Performance: user-guide/performance.md
+  - API Reference:
+    - Core: api/core.md
+    - Models: api/models.md
+    - Testing: api/testing.md
+    - Filters: api/filters.md
+    - Experiment: api/experiment.md
+    - Datasets: api/datasets.md
+  - Theory:
+    - ARIMA Theory: theory/arima-theory.md
+    - VAR/SVAR Theory: theory/var-theory.md
+    - Cointegration: theory/cointegration-theory.md
+    - Filters: theory/filters-theory.md
+  - Examples:
+    - Airline Analysis: examples/airline-analysis.md
+    - Macro VAR: examples/macro-var.md
+    - Cointegration: examples/cointegration-analysis.md
+    - Business Cycles: examples/business-cycle.md
+  - Benchmarks: benchmarks.md

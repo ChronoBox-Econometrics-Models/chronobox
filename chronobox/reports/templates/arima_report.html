@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}ARIMA Report{% endblock %}
+
+{% block header_title %}{{ title | default('ARIMA Model Report') }}{% endblock %}
+
+{% block header_subtitle %}
+{% if model_info %}
+<p class="subtitle">
+    {{ model_info.get('model_type', 'ARIMA') }}
+    {% if model_info.get('order') %}({{ model_info.order }}){% endif %}
+    {% if model_info.get('seasonal_order') %} x {{ model_info.seasonal_order }}{% endif %}
+    {% if model_info.get('nobs') %} | N = {{ model_info.nobs }}{% endif %}
+</p>
+{% endif %}
+{% endblock %}
+
+{% block sidebar_nav %}
+<li><a href="#section-params">Parameters</a></li>
+<li><a href="#section-ic">Information Criteria</a></li>
+<li><a href="#section-diagnostics">Diagnostics</a></li>
+{% if roots is defined and roots %}<li><a href="#section-roots">Roots</a></li>{% endif %}
+{% for section in sections %}
+{% if section.title not in ['Parameter Estimates', 'Information Criteria', 'Diagnostic Tests', 'Polynomial Roots'] %}
+<li><a href="#section-{{ loop.index0 }}">{{ section.title }}</a></li>
+{% endif %}
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+{% if tables and tables.parameters %}
+<section id="section-params" class="cb-section">
+    <h2>Parameter Estimates</h2>
+    <table class="cb-table">
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Estimate</th>
+                <th>Std. Error</th>
+                <th>t-stat</th>
+                <th>p-value</th>
+                <th>Sig.</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for param in tables.parameters %}
+            <tr>
+                <td>{{ param.name }}</td>
+                <td class="num">{{ param.value | format_number(4) }}</td>
+                <td class="num">{{ param.get('std_error', '') | format_number(4) if param.get('std_error') is not none else '---' }}</td>
+                <td class="num">{{ param.get('t_stat', '') | format_number(4) if param.get('t_stat') is not none else '---' }}</td>
+                <td class="num">{{ param.get('p_value', '') | format_pvalue if param.get('p_value') is not none else '---' }}</td>
+                <td class="sig">{{ param.get('significance', '') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endif %}
+
+{% if information_criteria %}
+<section id="section-ic" class="cb-section">
+    <h2>Information Criteria</h2>
+    <div class="cb-metrics">
+        {% for name, value in information_criteria.items() %}
+        {% if value is not none %}
+        <div class="cb-metric">
+            <div class="cb-metric-value">{{ value | format_number(2) }}</div>
+            <div class="cb-metric-label">{{ name }}</div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+{% if diagnostics %}
+<section id="section-diagnostics" class="cb-section">
+    <h2>Diagnostic Tests</h2>
+    <table class="cb-table">
+        <thead>
+            <tr><th>Test</th><th>Statistic</th><th>p-value</th><th>Conclusion</th></tr>
+        </thead>
+        <tbody>
+            {% for diag in diagnostics %}
+            <tr>
+                <td>{{ diag.test }}</td>
+                <td class="num">{{ diag.get('statistic', '---') | format_number(4) if diag.get('statistic') is not none else '---' }}</td>
+                <td class="num">{{ diag.get('p_value', '---') | format_pvalue if diag.get('p_value') is not none else '---' }}</td>
+                <td>{{ diag.get('conclusion', '---') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endif %}
+
+{% if roots is defined and roots %}
+<section id="section-roots" class="cb-section">
+    <div class="cb-collapsible">
+        <div class="cb-collapsible-toggle">Polynomial Roots</div>
+        <div class="cb-collapsible-content">
+            <table class="cb-table">
+                <thead>
+                    <tr><th>Type</th><th>#</th><th>Real</th><th>Imag</th><th>Modulus</th></tr>
+                </thead>
+                <tbody>
+                    {% for root in roots %}
+                    <tr>
+                        <td>{{ root.type }}</td>
+                        <td>{{ root.index }}</td>
+                        <td class="num">{{ root.real | format_number(4) }}</td>
+                        <td class="num">{{ root.imag | format_number(4) }}</td>
+                        <td class="num">{{ root.modulus | format_number(4) }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{{ super() }}
+{% endblock %}

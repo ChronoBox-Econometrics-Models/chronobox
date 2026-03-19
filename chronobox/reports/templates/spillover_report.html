@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Spillover Report{% endblock %}
+{% block header_title %}{{ title | default('Spillover Analysis Report') }}{% endblock %}
+
+{% block content %}
+{% if total_spillover_index is defined %}
+<section class="cb-section">
+    <h2>Total Spillover Index</h2>
+    <div class="cb-metric" style="max-width: 200px; margin: 0 auto;">
+        <div class="cb-metric-value">{{ total_spillover_index | format_number(1) }}%</div>
+        <div class="cb-metric-label">Total Spillover</div>
+    </div>
+</section>
+{% endif %}
+
+{{ super() }}
+{% endblock %}

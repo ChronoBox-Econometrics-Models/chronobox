@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}VAR Report{% endblock %}
+
+{% block header_title %}{{ title | default('VAR Model Report') }}{% endblock %}
+
+{% block header_subtitle %}
+{% if model_info %}
+<p class="subtitle">
+    {{ model_info.get('model_type', 'VAR') }}({{ model_info.get('lags', '?') }})
+    | K = {{ model_info.get('n_equations', '?') }}
+    {% if model_info.get('nobs') %} | N = {{ model_info.nobs }}{% endif %}
+    {% if model_info.get('variables') %} | Variables: {{ model_info.variables | join(', ') }}{% endif %}
+</p>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if stability %}
+<section id="section-stability" class="cb-section">
+    <h2>Stability Analysis</h2>
+    <div class="cb-info">{{ stability.summary }}</div>
+</section>
+{% endif %}
+
+{{ super() }}
+
+{% if irf %}
+<section id="section-irf" class="cb-section">
+    <h2>Impulse Response Functions</h2>
+    <p>IRF analysis is available for this model.</p>
+</section>
+{% endif %}
+
+{% if fevd %}
+<section id="section-fevd" class="cb-section">
+    <h2>Forecast Error Variance Decomposition</h2>
+    <p>FEVD analysis is available for this model.</p>
+</section>
+{% endif %}
+{% endblock %}

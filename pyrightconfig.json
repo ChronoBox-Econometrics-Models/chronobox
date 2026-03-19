@@ -1,0 +1,22 @@
+{
+    "include": ["chronobox"],
+    "exclude": ["tests", "docs", "scripts"],
+    "reportMissingImports": true,
+    "reportMissingTypeStubs": false,
+    "reportGeneralTypeIssues": true,
+    "pythonVersion": "3.11",
+    "pythonPlatform": "Linux",
+    "typeCheckingMode": "basic",
+    "reportUnnecessaryTypeIgnoreComment": false,
+    "reportUnusedImport": true,
+    "reportUnusedVariable": false,
+    "reportArgumentType": false,
+    "reportCallIssue": false,
+    "reportPrivateImportUsage": false,
+    "reportOptionalSubscript": false,
+    "reportOptionalMemberAccess": false,
+    "reportAssignmentType": false,
+    "reportReturnType": false,
+    "reportAttributeAccessIssue": false,
+    "reportOptionalOperand": false
+}

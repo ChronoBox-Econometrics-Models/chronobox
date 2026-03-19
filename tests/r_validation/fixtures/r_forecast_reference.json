@@ -1,0 +1,38 @@
+{
+    "description": "Reference values from R forecast package v8.21",
+    "r_version": "4.3.2",
+    "package_version": "8.21",
+    "models": {
+        "airline_arima_011_011_12": {
+            "data": "AirPassengers",
+            "order": [0, 1, 1],
+            "seasonal_order": [0, 1, 1],
+            "seasonal_period": 12,
+            "coefficients": {
+                "ma1": -0.3087,
+                "sma1": -0.1074
+            },
+            "loglikelihood": -507.50,
+            "aic": 1021.00,
+            "bic": 1029.63,
+            "aicc": 1021.19,
+            "sigma2": 135.4,
+            "residual_variance": 135.4,
+            "forecast_12": [
+                3.05, 0.82, 3.65, -5.63, 1.28, -0.96,
+                -1.43, 2.92, 0.21, -0.85, 2.76, -0.07
+            ],
+            "forecast_se_12": [
+                11.5, 15.3, 18.5, 21.4, 24.0, 26.5,
+                28.9, 31.1, 33.2, 35.2, 37.1, 39.0
+            ]
+        },
+        "airline_auto_arima": {
+            "data": "AirPassengers",
+            "selected_order": [0, 1, 1],
+            "selected_seasonal": [0, 1, 1],
+            "aic": 1021.00,
+            "bic": 1029.63
+        }
+    }
+}
