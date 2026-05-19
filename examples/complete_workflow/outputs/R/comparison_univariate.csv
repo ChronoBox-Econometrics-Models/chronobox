@@ -1,0 +1,34 @@
+"category","metric","python","R","diferenca_absoluta","tolerance","tolerance_type","within_tolerance"
+"Unit Root","adf_raw_statistic",0.815368879206023,-7.3186,8.13396887920602,0.5,"unit_root_statistic",FALSE
+"Unit Root","adf_raw_pvalue",0.99,0.01,0.98,0.1,"unit_root_pvalue",FALSE
+"Unit Root","adf_log_statistic",-1.71701708910671,-6.4215,4.70448291089329,0.5,"unit_root_statistic",FALSE
+"Unit Root","adf_log_pvalue",0.400675061340489,0.01,0.390675061340489,0.1,"unit_root_pvalue",FALSE
+"Unit Root","kpss_raw_statistic",2.73947362096219,2.7395,2.6379037814106e-05,0.5,"unit_root_statistic",TRUE
+"Unit Root","kpss_raw_pvalue",0.005,0.01,0.005,0.1,"unit_root_pvalue",TRUE
+"Unit Root","kpss_log_statistic",2.8286747955542,2.8287,2.52044457957901e-05,0.5,"unit_root_statistic",TRUE
+"Unit Root","kpss_log_pvalue",0.005,0.01,0.005,0.1,"unit_root_pvalue",TRUE
+"Unit Root","adf_diff_log_statistic",-3.05303201091532,-6.4313,3.37826798908468,0.5,"unit_root_statistic",FALSE
+"Unit Root","adf_diff_log_pvalue",0.0386671174117872,0.01,0.0286671174117872,0.1,"unit_root_pvalue",TRUE
+"Unit Root","adf_diff_seasonal_log_statistic",-16.775530218837,-5.1993,11.576230218837,0.5,"unit_root_statistic",FALSE
+"Unit Root","adf_diff_seasonal_log_pvalue",0.005,0.01,0.005,0.1,"unit_root_pvalue",TRUE
+"Unit Root","zivot_andrews_statistic",-3.99716636919623,-5.4683,1.47113363080377,0.5,"unit_root_statistic",FALSE
+"Models","ETS_AIC",965.996009164731,1244.4579942902,278.461985125469,10,"model_aic",FALSE
+"Models","ETS_BIC",1015.0036418487,1296.34842889675,281.34478704805,10,"model_bic",FALSE
+"Models","ETS_RMSE",26.0507500493748,27.3980396702912,1.34728962091643,5,"forecast_rmse",TRUE
+"Models","ETS_MAE",20.8729717840007,22.8045023369216,1.9315305529209,5,"forecast_mae",TRUE
+"Models","HW_RMSE",54.9072534842039,31.9824739961026,22.9247794881013,5,"forecast_rmse",FALSE
+"Models","HW_MAE",46.5521763293274,24.1723570678754,22.379819261452,5,"forecast_mae",FALSE
+"Models","Theta_RMSE",96.8878904949594,30.7180738595988,66.1698166353606,5,"forecast_rmse",FALSE
+"Models","Theta_MAE",70.4740929055194,26.3345932156034,44.139499689916,5,"forecast_mae",FALSE
+"Forecasts","ETS_forecast_h1",442.768453018341,441.801847278479,0.966605739862246,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h2",435.900093134432,434.118620068782,1.78147306564972,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h3",498.826885550205,496.630046776999,2.19683877320568,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h4",485.961399263025,483.23747944576,2.72391981726469,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h5",487.564187160455,483.991353446536,3.57283371391901,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h6",554.069162793334,551.024400008046,3.04476278528853,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h7",617.476653422911,613.179679246499,4.29697417641194,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h8",614.180546041064,609.364830849264,4.81571519179977,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h9",534.269874369375,530.540834527191,3.72903984218408,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h10",467.016070217006,463.03321448673,3.98285573027624,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h11",406.252290849565,402.747800050565,3.50449079900011,20,"forecast_value",TRUE
+"Forecasts","ETS_forecast_h12",457.391667732238,451.969373093448,5.42229463878954,20,"forecast_value",TRUE

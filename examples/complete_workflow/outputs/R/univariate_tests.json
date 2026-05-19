@@ -1,0 +1,51 @@
+{
+  "dataset": "airline.csv",
+  "n_obs": 144,
+  "frequency": "monthly",
+  "tests": {
+    "adf_raw": {
+      "statistic": -7.3186,
+      "pvalue": 0.01,
+      "reject_h0": true,
+      "conclusion": "Stationary"
+    },
+    "adf_log": {
+      "statistic": -6.4215,
+      "pvalue": 0.01,
+      "reject_h0": true,
+      "conclusion": "Stationary"
+    },
+    "kpss_raw": {
+      "statistic": 2.7395,
+      "pvalue": 0.01,
+      "reject_h0": true,
+      "conclusion": "Non-stationary"
+    },
+    "kpss_log": {
+      "statistic": 2.8287,
+      "pvalue": 0.01,
+      "reject_h0": true,
+      "conclusion": "Non-stationary"
+    },
+    "zivot_andrews_raw": {
+      "statistic": -5.4683
+    },
+    "adf_diff_log": {
+      "statistic": -6.4313,
+      "pvalue": 0.01,
+      "reject_h0": true,
+      "conclusion": "Stationary"
+    },
+    "adf_diff_seasonal_log": {
+      "statistic": -5.1993,
+      "pvalue": 0.01,
+      "reject_h0": true,
+      "conclusion": "Stationary"
+    }
+  },
+  "integration_order": {
+    "regular": 1,
+    "seasonal": 1,
+    "log_transform": true
+  }
+}

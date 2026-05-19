@@ -1,0 +1,45 @@
+{
+  "model": "ECM from ARDL",
+  "dataset": "ardl_synthetic.csv",
+  "nobs": 197,
+  "k_params": 13,
+  "r_squared": 0.400738,
+  "aic": -257.3455,
+  "bic": -214.6639,
+  "speed_of_adjustment": {
+    "pi_yy": -0.247422,
+    "half_life_quarters": 2.44,
+    "pct_correction_per_period": 24.74
+  },
+  "long_run_coefficients": {
+    "x1": 0.551412,
+    "x2": 0.879641,
+    "x3": 0.005058
+  },
+  "pi_yx": {
+    "x1": 0.136431,
+    "x2": 0.217643,
+    "x3": 0.001252
+  },
+  "short_run_y": [
+    0.01023,
+    -0.045541
+  ],
+  "short_run_x": [
+    0.361227,
+    -0.028387,
+    0.184768,
+    -0.032405,
+    -0.009353,
+    0.026722
+  ],
+  "pss_t_test": {
+    "t_statistic": -5.6824,
+    "conclusion": "reject_h0"
+  },
+  "true_dgp": {
+    "long_run_x1": 0.6,
+    "speed_of_adjustment": -0.25,
+    "intercept": 1.5
+  }
+}

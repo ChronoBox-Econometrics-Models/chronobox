@@ -530,7 +530,10 @@ def _johansen_estimation(
         x_mat = np.column_stack(x_parts)  # (T_eff, m)
 
         # R0 = dy_dep - X * (X'X)^{-1} X' dy_dep
-        xtx_inv = np.linalg.inv(x_mat.T @ x_mat)
+        try:
+            xtx_inv = np.linalg.inv(x_mat.T @ x_mat)
+        except np.linalg.LinAlgError:
+            xtx_inv = np.linalg.pinv(x_mat.T @ x_mat)
         proj_x = x_mat @ xtx_inv @ x_mat.T
 
         r0 = dy_dep - proj_x @ dy_dep  # (T_eff, K)
@@ -548,8 +551,15 @@ def _johansen_estimation(
 
     # Solve generalized eigenvalue problem:
     # S_10 * S_00^{-1} * S_01 * v = lambda * S_11 * v
-    s00_inv = np.linalg.inv(s00)
-    mat = np.linalg.inv(s11) @ s10 @ s00_inv @ s01
+    try:
+        s00_inv = np.linalg.inv(s00)
+    except np.linalg.LinAlgError:
+        s00_inv = np.linalg.pinv(s00)
+    try:
+        s11_inv = np.linalg.inv(s11)
+    except np.linalg.LinAlgError:
+        s11_inv = np.linalg.pinv(s11)
+    mat = s11_inv @ s10 @ s00_inv @ s01
 
     eigenvalues_raw, eigenvectors_raw = np.linalg.eig(mat)
 
@@ -777,7 +787,10 @@ class VECM:
 
         # alpha = S_01 * beta * (beta' * S_11 * beta)^{-1}
         bsb = beta.T @ s11 @ beta  # (r, r)
-        bsb_inv = np.linalg.inv(bsb)
+        try:
+            bsb_inv = np.linalg.inv(bsb)
+        except np.linalg.LinAlgError:
+            bsb_inv = np.linalg.pinv(bsb)
         alpha = s01 @ beta @ bsb_inv  # (K, r)
 
         # Normalize beta: first variable coefficient = 1 for each vector

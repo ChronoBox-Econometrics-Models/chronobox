@@ -1,0 +1,537 @@
+{
+  "metadata": {
+    "notebook": "04_structural_breaks_solution",
+    "tests": [
+      "Chow",
+      "CUSUM",
+      "CUSUM-sq",
+      "Bai-Perron"
+    ],
+    "seed": 42,
+    "n_synthetic": 200
+  },
+  "chow_results": [
+    {
+      "test": "Chow",
+      "series": "Nivel (ponto correto)",
+      "break_point": 100,
+      "statistic": 79.41430604769602,
+      "pvalue": 0.0,
+      "reject_at_5pct": true,
+      "decision": "Quebra detectada",
+      "SSR_full": 276.330272432422,
+      "SSR_1": 58.22319192377278,
+      "SSR_2": 94.41594581913888,
+      "T1": 100.0,
+      "T2": 100.0
+    },
+    {
+      "test": "Chow",
+      "series": "Nivel (ponto errado t=50)",
+      "break_point": 50,
+      "statistic": 7.257937878907517,
+      "pvalue": 0.0009102891953467473,
+      "reject_at_5pct": true,
+      "decision": "Quebra detectada",
+      "SSR_full": 276.330272432422,
+      "SSR_1": 28.034832864541006,
+      "SSR_2": 229.2414091375736,
+      "T1": 50.0,
+      "T2": 150.0
+    },
+    {
+      "test": "Chow",
+      "series": "Tendencia (ponto correto)",
+      "break_point": 100,
+      "statistic": 119.61037390773674,
+      "pvalue": 0.0,
+      "reject_at_5pct": true,
+      "decision": "Quebra detectada",
+      "SSR_full": 338.93734527744425,
+      "SSR_1": 58.22319192377278,
+      "SSR_2": 94.41594581913887,
+      "T1": 100.0,
+      "T2": 100.0
+    },
+    {
+      "test": "Chow",
+      "series": "Estavel (controle)",
+      "break_point": 100,
+      "statistic": 1.3728460336085342,
+      "pvalue": 0.2558103176853943,
+      "reject_at_5pct": false,
+      "decision": "Sem quebra",
+      "SSR_full": 154.77740340437884,
+      "SSR_1": 58.22319192377278,
+      "SSR_2": 94.41594581913888,
+      "T1": 100.0,
+      "T2": 100.0
+    },
+    {
+      "test": "Chow",
+      "series": "PIB Brasil (break=36, ~2003-Q1)",
+      "break_point": 36,
+      "statistic": 2.106498480824447,
+      "pvalue": 0.12633348321829718,
+      "reject_at_5pct": false,
+      "decision": "Sem quebra",
+      "SSR_full": 104.82454586905506,
+      "SSR_1": 33.41576869700773,
+      "SSR_2": 67.7042692366028,
+      "T1": 36.0,
+      "T2": 83.0
+    },
+    {
+      "test": "Chow",
+      "series": "PIB EUA (2008-Q3 (crise financeira))",
+      "break_point": 137,
+      "statistic": 1.0626707923317658,
+      "pvalue": 0.34752405053571944,
+      "reject_at_5pct": false,
+      "decision": "Sem quebra",
+      "SSR_full": 98.97948050796231,
+      "SSR_1": 55.75624555586383,
+      "SSR_2": 42.15607025241619,
+      "T1": 137.0,
+      "T2": 62.0
+    },
+    {
+      "test": "Chow",
+      "series": "PIB EUA (2020-Q1 (COVID))",
+      "break_point": 183,
+      "statistic": 0.6828306216042496,
+      "pvalue": 0.5063887307315171,
+      "reject_at_5pct": false,
+      "decision": "Sem quebra",
+      "SSR_full": 98.97948050796231,
+      "SSR_1": 88.24630099892909,
+      "SSR_2": 10.044808438720588,
+      "T1": 183.0,
+      "T2": 16.0
+    }
+  ],
+  "cusum_results": [
+    {
+      "test": "CUSUM",
+      "series": "Quebra de nivel",
+      "statistic": 46.39744264539801,
+      "reject_at_5pct": true,
+      "decision": "Instabilidade detectada",
+      "max_cusum": 46.39744264539801
+    },
+    {
+      "test": "CUSUM",
+      "series": "Estavel (controle)",
+      "statistic": 12.335069835793528,
+      "reject_at_5pct": false,
+      "decision": "Parametros estaveis",
+      "max_cusum": 12.335069835793528
+    },
+    {
+      "test": "CUSUM",
+      "series": "Quebra de tendencia",
+      "statistic": 91.28424384027764,
+      "reject_at_5pct": true,
+      "decision": "Instabilidade detectada",
+      "max_cusum": 91.28424384027764
+    },
+    {
+      "test": "CUSUM",
+      "series": "PIB Brasil",
+      "statistic": 24.57932784727386,
+      "reject_at_5pct": false,
+      "decision": "Parametros estaveis",
+      "max_cusum": 24.57932784727386
+    },
+    {
+      "test": "CUSUM",
+      "series": "PIB EUA",
+      "statistic": 18.30484243885915,
+      "reject_at_5pct": false,
+      "decision": "Parametros estaveis",
+      "max_cusum": 18.30484243885915
+    }
+  ],
+  "cusumsq_results": [
+    {
+      "test": "CUSUM-sq",
+      "series": "Quebra de nivel",
+      "statistic": 0.28424803465975584,
+      "reject_at_5pct": true,
+      "decision": "Instabilidade na variancia",
+      "max_deviation": 0.2816843265122913
+    },
+    {
+      "test": "CUSUM-sq",
+      "series": "Estavel (controle)",
+      "statistic": 0.14205763046295455,
+      "reject_at_5pct": false,
+      "decision": "Variancia estavel",
+      "max_deviation": 0.13995538978203365
+    },
+    {
+      "test": "CUSUM-sq",
+      "series": "Quebra de tendencia",
+      "statistic": 0.37146108130838,
+      "reject_at_5pct": true,
+      "decision": "Instabilidade na variancia",
+      "max_deviation": 0.3693588406274591
+    },
+    {
+      "test": "CUSUM-sq",
+      "series": "PIB Brasil",
+      "statistic": 0.07610843052185556,
+      "reject_at_5pct": false,
+      "decision": "Variancia estavel",
+      "max_deviation": 0.07419272170959501
+    }
+  ],
+  "bai_perron_results": [
+    {
+      "test": "Bai-Perron",
+      "series": "Quebra de nivel",
+      "max_breaks": 3,
+      "trim": 0.15,
+      "statistic": 305.0364747560612,
+      "pvalue": 0.0,
+      "reject_at_5pct": true,
+      "decision": "Nenhuma quebra",
+      "n_breaks_detected": 0,
+      "break_indices": []
+    },
+    {
+      "test": "Bai-Perron",
+      "series": "Quebra de tendencia",
+      "max_breaks": 3,
+      "trim": 0.15,
+      "statistic": 597.7047306896839,
+      "pvalue": 0.0,
+      "reject_at_5pct": true,
+      "decision": "Nenhuma quebra",
+      "n_breaks_detected": 0,
+      "break_indices": []
+    },
+    {
+      "test": "Bai-Perron",
+      "series": "Estavel (controle)",
+      "max_breaks": 3,
+      "trim": 0.15,
+      "statistic": 1.8037061631856446,
+      "pvalue": 1.0,
+      "reject_at_5pct": false,
+      "decision": "Nenhuma quebra",
+      "n_breaks_detected": 0,
+      "break_indices": []
+    },
+    {
+      "test": "Bai-Perron",
+      "series": "2 quebras (t=100,200)",
+      "max_breaks": 5,
+      "trim": 0.15,
+      "statistic": 280.4586878174464,
+      "pvalue": 0.0,
+      "reject_at_5pct": true,
+      "decision": "Nenhuma quebra",
+      "n_breaks_detected": 0,
+      "break_indices": []
+    },
+    {
+      "test": "Bai-Perron",
+      "series": "PIB Brasil",
+      "max_breaks": 3,
+      "trim": 0.15,
+      "statistic": 2.837596157273881,
+      "pvalue": 1.0,
+      "reject_at_5pct": false,
+      "decision": "Nenhuma quebra",
+      "n_breaks_detected": 0,
+      "break_indices": []
+    },
+    {
+      "test": "Bai-Perron",
+      "series": "PIB EUA (crescimento)",
+      "max_breaks": 3,
+      "trim": 0.15,
+      "statistic": 1.8337993430040012,
+      "pvalue": 1.0,
+      "reject_at_5pct": false,
+      "decision": "Nenhuma quebra",
+      "n_breaks_detected": 0,
+      "break_indices": []
+    }
+  ],
+  "chow_scan": [
+    {
+      "break_point": 30,
+      "F_stat": 4.724621549906237,
+      "pvalue": 0.009909449378949553,
+      "reject": true
+    },
+    {
+      "break_point": 40,
+      "F_stat": 5.848622506151074,
+      "pvalue": 0.0034110090740144816,
+      "reject": true
+    },
+    {
+      "break_point": 50,
+      "F_stat": 7.257937878907517,
+      "pvalue": 0.0009102891953467473,
+      "reject": true
+    },
+    {
+      "break_point": 60,
+      "F_stat": 6.810378325374432,
+      "pvalue": 0.0013820862068127937,
+      "reject": true
+    },
+    {
+      "break_point": 70,
+      "F_stat": 6.801166361605882,
+      "pvalue": 0.0013940425955119018,
+      "reject": true
+    },
+    {
+      "break_point": 80,
+      "F_stat": 9.49284819266626,
+      "pvalue": 0.00011613350216455043,
+      "reject": true
+    },
+    {
+      "break_point": 90,
+      "F_stat": 18.8241380688762,
+      "pvalue": 3.326304787165668e-08,
+      "reject": true
+    },
+    {
+      "break_point": 100,
+      "F_stat": 79.41430604769602,
+      "pvalue": 0.0,
+      "reject": true
+    },
+    {
+      "break_point": 110,
+      "F_stat": 26.427334356841094,
+      "pvalue": 6.892986181838978e-11,
+      "reject": true
+    },
+    {
+      "break_point": 120,
+      "F_stat": 9.666637113742745,
+      "pvalue": 9.912949055823628e-05,
+      "reject": true
+    },
+    {
+      "break_point": 130,
+      "F_stat": 3.499916454680502,
+      "pvalue": 0.03210098137046502,
+      "reject": true
+    },
+    {
+      "break_point": 140,
+      "F_stat": 1.952452816363217,
+      "pvalue": 0.14467607573234487,
+      "reject": false
+    },
+    {
+      "break_point": 150,
+      "F_stat": 2.051787612847088,
+      "pvalue": 0.13125621310947,
+      "reject": false
+    },
+    {
+      "break_point": 160,
+      "F_stat": 2.0548939545138514,
+      "pvalue": 0.13085746094744222,
+      "reject": false
+    }
+  ],
+  "gdp_brazil_breaks": {
+    "chow": {
+      "test": "Chow",
+      "series": "PIB Brasil (break=36, ~2003-Q1)",
+      "break_point": 36,
+      "statistic": 2.106498480824447,
+      "pvalue": 0.12633348321829718,
+      "reject_at_5pct": false,
+      "decision": "Sem quebra",
+      "SSR_full": 104.82454586905506,
+      "SSR_1": 33.41576869700773,
+      "SSR_2": 67.7042692366028,
+      "T1": 36.0,
+      "T2": 83.0
+    },
+    "cusum": {
+      "test": "CUSUM",
+      "series": "PIB Brasil",
+      "statistic": 24.57932784727386,
+      "reject_at_5pct": false,
+      "decision": "Parametros estaveis",
+      "max_cusum": 24.57932784727386
+    },
+    "cusumsq": {
+      "test": "CUSUM-sq",
+      "series": "PIB Brasil",
+      "statistic": 0.07610843052185556,
+      "reject_at_5pct": false,
+      "decision": "Variancia estavel",
+      "max_deviation": 0.07419272170959501
+    },
+    "bai_perron": {
+      "test": "Bai-Perron",
+      "series": "PIB Brasil",
+      "max_breaks": 3,
+      "trim": 0.15,
+      "statistic": 2.837596157273881,
+      "pvalue": 1.0,
+      "reject_at_5pct": false,
+      "decision": "Nenhuma quebra",
+      "n_breaks_detected": 0,
+      "break_indices": []
+    }
+  },
+  "gdp_us_breaks": {
+    "chow_2008-Q3 (crise financeira)": {
+      "test": "Chow",
+      "series": "PIB EUA (2008-Q3 (crise financeira))",
+      "break_point": 137,
+      "statistic": 1.0626707923317658,
+      "pvalue": 0.34752405053571944,
+      "reject_at_5pct": false,
+      "decision": "Sem quebra",
+      "SSR_full": 98.97948050796231,
+      "SSR_1": 55.75624555586383,
+      "SSR_2": 42.15607025241619,
+      "T1": 137.0,
+      "T2": 62.0
+    },
+    "chow_2020-Q1 (COVID)": {
+      "test": "Chow",
+      "series": "PIB EUA (2020-Q1 (COVID))",
+      "break_point": 183,
+      "statistic": 0.6828306216042496,
+      "pvalue": 0.5063887307315171,
+      "reject_at_5pct": false,
+      "decision": "Sem quebra",
+      "SSR_full": 98.97948050796231,
+      "SSR_1": 88.24630099892909,
+      "SSR_2": 10.044808438720588,
+      "T1": 183.0,
+      "T2": 16.0
+    },
+    "bai_perron": {
+      "test": "Bai-Perron",
+      "series": "PIB EUA (crescimento)",
+      "max_breaks": 3,
+      "trim": 0.15,
+      "statistic": 1.8337993430040012,
+      "pvalue": 1.0,
+      "reject_at_5pct": false,
+      "decision": "Nenhuma quebra",
+      "n_breaks_detected": 0,
+      "break_indices": []
+    },
+    "cusum": {
+      "test": "CUSUM",
+      "series": "PIB EUA",
+      "statistic": 18.30484243885915,
+      "reject_at_5pct": false,
+      "decision": "Parametros estaveis",
+      "max_cusum": 18.30484243885915
+    }
+  },
+  "exercise1_trim_sensitivity": [
+    {
+      "trim": 0.05,
+      "min_segment": 15,
+      "n_breaks": 0,
+      "break_indices": [],
+      "F_stat": 192.08015204422466,
+      "reject": true
+    },
+    {
+      "trim": 0.1,
+      "min_segment": 30,
+      "n_breaks": 0,
+      "break_indices": [],
+      "F_stat": 280.6662785141825,
+      "reject": true
+    },
+    {
+      "trim": 0.15,
+      "min_segment": 45,
+      "n_breaks": 0,
+      "break_indices": [],
+      "F_stat": 280.4586878174464,
+      "reject": true
+    },
+    {
+      "trim": 0.2,
+      "min_segment": 60,
+      "n_breaks": 0,
+      "break_indices": [],
+      "F_stat": 195.92435202282942,
+      "reject": true
+    },
+    {
+      "trim": 0.25,
+      "min_segment": 75,
+      "n_breaks": 0,
+      "break_indices": [],
+      "F_stat": 171.75158052718967,
+      "reject": true
+    }
+  ],
+  "summary_table": [
+    {
+      "Serie": "Quebra nivel",
+      "Quebra verdadeira": "100",
+      "Chow F": "79.414",
+      "Chow rej": "Sim",
+      "CUSUM rej": "Sim",
+      "CUSUM-sq rej": "Sim",
+      "BP quebras": "[]",
+      "Decisao Final": "Quebra detectada"
+    },
+    {
+      "Serie": "Quebra tendencia",
+      "Quebra verdadeira": "100",
+      "Chow F": "119.610",
+      "Chow rej": "Sim",
+      "CUSUM rej": "Sim",
+      "CUSUM-sq rej": "Sim",
+      "BP quebras": "[]",
+      "Decisao Final": "Quebra detectada"
+    },
+    {
+      "Serie": "Estavel (controle)",
+      "Quebra verdadeira": "N/A",
+      "Chow F": "1.373",
+      "Chow rej": "Nao",
+      "CUSUM rej": "Nao",
+      "CUSUM-sq rej": "Nao",
+      "BP quebras": "[]",
+      "Decisao Final": "Sem quebra"
+    },
+    {
+      "Serie": "PIB Brasil (cresc.)",
+      "Quebra verdadeira": "~36 (2003-Q1)",
+      "Chow F": "2.106",
+      "Chow rej": "Nao",
+      "CUSUM rej": "Nao",
+      "CUSUM-sq rej": "Nao",
+      "BP quebras": "[]",
+      "Decisao Final": "Nenhuma quebra"
+    },
+    {
+      "Serie": "PIB EUA (cresc.)",
+      "Quebra verdadeira": "2008/2020?",
+      "Chow F": "-",
+      "Chow rej": "-",
+      "CUSUM rej": "Nao",
+      "CUSUM-sq rej": "-",
+      "BP quebras": "[]",
+      "Decisao Final": "Nenhuma quebra"
+    }
+  ]
+}

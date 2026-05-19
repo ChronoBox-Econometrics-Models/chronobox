@@ -1,0 +1,64 @@
+{
+  "model": "ARDL(1, 1, 1, 1)",
+  "criterion": "aic",
+  "dataset": "ardl_synthetic.csv",
+  "nobs": 199,
+  "k_params": 8,
+  "r_squared": 0.954173,
+  "adj_r_squared": 0.952493,
+  "aic": -268.8598,
+  "bic": -242.5134,
+  "sigma2": 0.24897,
+  "coefficients": {
+    "const": {
+      "estimate": 0.257148,
+      "std_error": 0.09829,
+      "t_statistic": 2.6162
+    },
+    "y_lag1": {
+      "estimate": 0.771966,
+      "std_error": 0.038588,
+      "t_statistic": 20.0052
+    },
+    "x1_lag0": {
+      "estimate": 0.359053,
+      "std_error": 0.044311,
+      "t_statistic": 8.103
+    },
+    "x1_lag1": {
+      "estimate": -0.232755,
+      "std_error": 0.048072,
+      "t_statistic": -4.8418
+    },
+    "x2_lag0": {
+      "estimate": 0.182702,
+      "std_error": 0.036713,
+      "t_statistic": 4.9765
+    },
+    "x2_lag1": {
+      "estimate": 0.013578,
+      "std_error": 0.039911,
+      "t_statistic": 0.3402
+    },
+    "x3_lag0": {
+      "estimate": -0.017738,
+      "std_error": 0.05767,
+      "t_statistic": -0.3076
+    },
+    "x3_lag1": {
+      "estimate": 0.019531,
+      "std_error": 0.058342,
+      "t_statistic": 0.3348
+    }
+  },
+  "long_run_coefficients": {
+    "x1": 0.553856,
+    "x2": 0.860746,
+    "x3": 0.007864
+  },
+  "true_dgp": {
+    "long_run_x1": 0.6,
+    "speed_of_adjustment": -0.25,
+    "intercept": 1.5
+  }
+}

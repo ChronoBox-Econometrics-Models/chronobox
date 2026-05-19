@@ -1,0 +1,53 @@
+{
+  "dataset": "airline.csv",
+  "n_obs": 144,
+  "frequency": "monthly",
+  "tests": {
+    "adf_raw": {
+      "statistic": 0.8153688792060231,
+      "pvalue": 0.99,
+      "reject_h0": false,
+      "conclusion": "Non-stationary"
+    },
+    "adf_log": {
+      "statistic": -1.717017089106708,
+      "pvalue": 0.40067506134048936,
+      "reject_h0": false,
+      "conclusion": "Non-stationary"
+    },
+    "kpss_raw": {
+      "statistic": 2.739473620962186,
+      "pvalue": 0.005,
+      "reject_h0": true,
+      "conclusion": "Non-stationary"
+    },
+    "kpss_log": {
+      "statistic": 2.828674795554204,
+      "pvalue": 0.005,
+      "reject_h0": true,
+      "conclusion": "Non-stationary"
+    },
+    "zivot_andrews_raw": {
+      "statistic": -3.997166369196227,
+      "pvalue": null,
+      "reject_h0": false
+    },
+    "adf_diff_log": {
+      "statistic": -3.053032010915316,
+      "pvalue": 0.03866711741178721,
+      "reject_h0": true,
+      "conclusion": "Stationary"
+    },
+    "adf_diff_seasonal_log": {
+      "statistic": -16.77553021883699,
+      "pvalue": 0.005,
+      "reject_h0": true,
+      "conclusion": "Stationary"
+    }
+  },
+  "integration_order": {
+    "regular": 1,
+    "seasonal": 1,
+    "log_transform": true
+  }
+}

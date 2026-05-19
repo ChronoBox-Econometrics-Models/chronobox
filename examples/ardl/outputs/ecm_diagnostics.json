@@ -1,0 +1,51 @@
+{
+  "model": "ECM from ARDL",
+  "dataset": "ardl_synthetic.csv",
+  "breusch_godfrey": {
+    "lag_1": {
+      "LM_statistic": 0.0006,
+      "p_value": 0.9805,
+      "reject_H0_5pct": false
+    },
+    "lag_2": {
+      "LM_statistic": 0.3252,
+      "p_value": 0.8499,
+      "reject_H0_5pct": false
+    },
+    "lag_3": {
+      "LM_statistic": 0.5002,
+      "p_value": 0.9188,
+      "reject_H0_5pct": false
+    },
+    "lag_4": {
+      "LM_statistic": 0.677,
+      "p_value": 0.9541,
+      "reject_H0_5pct": false
+    }
+  },
+  "cusum": {
+    "within_5pct_bounds": true,
+    "status": "stable"
+  },
+  "normality": {
+    "jarque_bera": {
+      "statistic": 0.893,
+      "p_value": 0.6399,
+      "reject_normality_5pct": false
+    },
+    "shapiro_wilk": {
+      "statistic": 0.9963,
+      "p_value": 0.921,
+      "reject_normality_5pct": false
+    },
+    "skewness": 0.0168,
+    "excess_kurtosis": -0.3281,
+    "status": "normal"
+  },
+  "residual_statistics": {
+    "mean": 0.0,
+    "std": 0.487166,
+    "min": -1.228616,
+    "max": 1.293182
+  }
+}

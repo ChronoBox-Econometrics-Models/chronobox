@@ -1,0 +1,66 @@
+{
+  "dataset": "us_macro_quarterly.csv",
+  "n_obs": 200,
+  "n_vars": 4,
+  "variables": ["gdp", "inflation", "fed_funds", "unemployment"],
+  "integration_orders": {
+    "gdp": "I(0)",
+    "inflation": "I(1)",
+    "fed_funds": "I(1)",
+    "unemployment": "I(1)"
+  },
+  "test_details": {
+    "gdp": {
+      "adf_level": {
+        "statistic": -4.5446,
+        "pvalue": 0.01,
+        "reject": true
+      },
+      "kpss_level": {
+        "statistic": 0.1826,
+        "pvalue": 0.1,
+        "reject": false
+      },
+      "integration_order": "I(0)"
+    },
+    "inflation": {
+      "adf_level": {
+        "statistic": -5.9968,
+        "pvalue": 0.01,
+        "reject": true
+      },
+      "kpss_level": {
+        "statistic": 0.5306,
+        "pvalue": 0.0348,
+        "reject": true
+      },
+      "integration_order": "I(1)"
+    },
+    "fed_funds": {
+      "adf_level": {
+        "statistic": -3.2572,
+        "pvalue": 0.0799,
+        "reject": false
+      },
+      "kpss_level": {
+        "statistic": 0.4892,
+        "pvalue": 0.0441,
+        "reject": true
+      },
+      "integration_order": "I(1)"
+    },
+    "unemployment": {
+      "adf_level": {
+        "statistic": -2.7633,
+        "pvalue": 0.2564,
+        "reject": false
+      },
+      "kpss_level": {
+        "statistic": 0.6615,
+        "pvalue": 0.017,
+        "reject": true
+      },
+      "integration_order": "I(1)"
+    }
+  }
+}

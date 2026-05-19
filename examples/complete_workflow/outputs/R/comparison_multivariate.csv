@@ -1,0 +1,65 @@
+"category","metric","python","R","diferenca_absoluta","tolerance","tolerance_type","within_tolerance"
+"Unit Root","gdp_adf_statistic",-8.91166594830565,-4.5446,4.36706594830565,0.5,"unit_root_statistic",FALSE
+"Unit Root","gdp_adf_pvalue",0.005,0.01,0.005,0.1,"unit_root_pvalue",TRUE
+"Unit Root","gdp_kpss_statistic",0.182584602593088,0.1826,1.53974069123375e-05,0.5,"unit_root_statistic",TRUE
+"Unit Root","gdp_kpss_pvalue",0.15,0.1,0.05,0.1,"unit_root_pvalue",TRUE
+"Unit Root","inflation_adf_statistic",-5.9903377041268,-5.9968,0.00646229587320235,0.5,"unit_root_statistic",TRUE
+"Unit Root","inflation_adf_pvalue",0.005,0.01,0.005,0.1,"unit_root_pvalue",TRUE
+"Unit Root","inflation_kpss_statistic",0.530610269065883,0.5306,1.02690658826399e-05,0.5,"unit_root_statistic",TRUE
+"Unit Root","inflation_kpss_pvalue",0.0347724619220985,0.0348,2.75380779014844e-05,0.1,"unit_root_pvalue",TRUE
+"Unit Root","fed_funds_adf_statistic",-3.46051627622265,-3.2572,0.203316276222647,0.5,"unit_root_statistic",TRUE
+"Unit Root","fed_funds_adf_pvalue",0.0102805629920895,0.0799,0.0696194370079105,0.1,"unit_root_pvalue",TRUE
+"Unit Root","fed_funds_kpss_statistic",0.489155132580751,0.4892,4.48674192490839e-05,0.5,"unit_root_statistic",TRUE
+"Unit Root","fed_funds_kpss_pvalue",0.0441092043737047,0.0441,9.20437370474647e-06,0.1,"unit_root_pvalue",TRUE
+"Unit Root","unemployment_adf_statistic",-3.26922355606677,-2.7633,0.50592355606677,0.5,"unit_root_statistic",FALSE
+"Unit Root","unemployment_adf_pvalue",0.0232736911144696,0.2564,0.23312630888553,0.1,"unit_root_pvalue",FALSE
+"Unit Root","unemployment_kpss_statistic",0.661464458751376,0.6615,3.5541248623483e-05,0.5,"unit_root_statistic",TRUE
+"Unit Root","unemployment_kpss_pvalue",0.0170486855680567,0.017,4.86855680566778e-05,0.1,"unit_root_pvalue",TRUE
+"Model Selection","VAR1_AIC",-6.59940776910021,-6.5601,0.0393077691002075,10,"model_aic",TRUE
+"Model Selection","VAR1_BIC",-6.33461944148417,-6.2207,0.113919441484168,10,"model_bic",TRUE
+"Cointegration","rank_trace",3,2,1,1,"cointegration_rank",TRUE
+"Spillover","total_spillover_index",19.3989578930917,17.2566,2.14235789309168,5,"spillover_index",TRUE
+"Spillover","gdp_from_others",3.13877413923511,0.3184,2.82037413923511,5,"spillover_index",TRUE
+"Spillover","gdp_to_others",10.4385762678723,48.6112,38.1726237321277,5,"spillover_index",FALSE
+"Spillover","inflation_from_others",2.58375242227691,6.9834,4.39964757772309,5,"spillover_index",TRUE
+"Spillover","inflation_to_others",3.91226698883826,13.6135,9.70123301116174,5,"spillover_index",FALSE
+"Spillover","fed_funds_from_others",6.42977544402672,24.5447,18.1149245559733,5,"spillover_index",FALSE
+"Spillover","fed_funds_to_others",0.900712316172539,3.0414,2.14068768382746,5,"spillover_index",TRUE
+"Spillover","unemployment_from_others",7.24665588755295,37.1798,29.9331441124471,5,"spillover_index",FALSE
+"Spillover","unemployment_to_others",4.14740232020863,3.7602,0.387202320208629,5,"spillover_index",TRUE
+"IRF (VAR)","h0_gdp->gdp",0.670451598807262,0.670451598807262,1.11022302462516e-16,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_inflation->gdp",0,0,0,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_fed_funds->gdp",0,0,0,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_unemployment->gdp",0,0,0,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_gdp->inflation",0.0767154628290121,0.076715462829012,8.32667268468867e-17,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_inflation->inflation",0.495223432094815,0.495223432094815,3.33066907387547e-16,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_fed_funds->inflation",0,0,0,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_unemployment->inflation",0,0,0,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_gdp->fed_funds",0.000463701457896,0.000463701457895981,1.89193279098721e-17,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_inflation->fed_funds",0.0423503176850549,0.042350317685055,1.2490009027033e-16,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_fed_funds->fed_funds",0.399241560498538,0.399241560498538,1.66533453693773e-16,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_unemployment->fed_funds",0,0,0,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_gdp->unemployment",-0.107044301808766,-0.107044301808766,5.55111512312578e-17,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_inflation->unemployment",0.0739128296252609,0.0739128296252606,2.4980018054066e-16,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_fed_funds->unemployment",-0.0586032524990273,-0.0586032524990275,1.52655665885959e-16,0.05,"irf_value",TRUE
+"IRF (VAR)","h0_unemployment->unemployment",0.27023213586267,0.27023213586267,1.11022302462516e-16,0.05,"irf_value",TRUE
+"IRF (BVAR)","h0_gdp->gdp",0.661975257969462,0.666999195187054,0.00502393721759198,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_inflation->gdp",0,0,0,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_fed_funds->gdp",0,0,0,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_unemployment->gdp",0,0,0,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_gdp->inflation",0.075745569682922,0.0717105343779398,0.00403503530498223,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_inflation->inflation",0.488962454257238,0.493732581133676,0.00477012687643807,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_fed_funds->inflation",0,0,0,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_unemployment->inflation",0,0,0,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_gdp->fed_funds",0.000457839003975333,-0.00277116699776399,0.00322900600173932,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_inflation->fed_funds",0.0418148939081167,0.0398792098753658,0.00193568403275087,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_fed_funds->fed_funds",0.394194055877144,0.394908145112528,0.000714089235384241,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_unemployment->fed_funds",0,0,0,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_gdp->unemployment",-0.105690969236378,-0.101032819517697,0.00465814971868117,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_inflation->unemployment",0.0729783694236527,0.0701008206237775,0.0028775487998752,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_fed_funds->unemployment",-0.0578623471998692,-0.0588642824826256,0.00100193528275644,0.15,"bvar_irf",TRUE
+"IRF (BVAR)","h0_unemployment->unemployment",0.266815663006205,0.269154093143267,0.00233843013706214,0.15,"bvar_irf",TRUE
+"Forecasts (VAR)","gdp_h1",3.28496153017381,3.2849615301738,5.32907051820075e-15,20,"forecast_value",TRUE
+"Forecasts (VAR)","inflation_h1",3.56007381503848,3.56007381503848,1.33226762955019e-15,20,"forecast_value",TRUE
+"Forecasts (VAR)","fed_funds_h1",6.48628075456643,6.48628075456643,0,20,"forecast_value",TRUE
+"Forecasts (VAR)","unemployment_h1",10.3625097861051,10.3625097861051,2.30926389122033e-14,20,"forecast_value",TRUE

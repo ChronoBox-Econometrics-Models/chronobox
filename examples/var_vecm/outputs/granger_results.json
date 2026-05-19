@@ -1,0 +1,154 @@
+{
+  "dataset": "us_macro_quarterly.csv",
+  "variables": [
+    "gdp",
+    "inflation",
+    "fed_funds",
+    "unemployment"
+  ],
+  "var_lags": 4,
+  "significance_level": 0.05,
+  "pvalue_matrix": {
+    "gdp": {
+      "gdp": null,
+      "inflation": 0.08886877652149816,
+      "fed_funds": 0.026751130988165506,
+      "unemployment": 0.014567184492084828
+    },
+    "inflation": {
+      "gdp": 0.7698119792270535,
+      "inflation": null,
+      "fed_funds": 0.10944892294202402,
+      "unemployment": 0.9060024418016427
+    },
+    "fed_funds": {
+      "gdp": 0.03259462052157247,
+      "inflation": 0.8688866329713942,
+      "fed_funds": null,
+      "unemployment": 0.24778727148132162
+    },
+    "unemployment": {
+      "gdp": 0.6712977886280618,
+      "inflation": 0.24523886004290985,
+      "fed_funds": 0.8562439048301582,
+      "unemployment": null
+    }
+  },
+  "pairwise_tests": [
+    {
+      "causing": "gdp",
+      "caused": "inflation",
+      "fstat": 2.0533246606713815,
+      "pvalue": 0.08886877652149816,
+      "wald_stat": 8.993332591990857,
+      "wald_pvalue": 0.061266350666328684,
+      "reject_5pct": false
+    },
+    {
+      "causing": "gdp",
+      "caused": "fed_funds",
+      "fstat": 2.815753501006864,
+      "pvalue": 0.026751130988165506,
+      "wald_stat": 12.332685725080344,
+      "wald_pvalue": 0.015041422270609228,
+      "reject_5pct": true
+    },
+    {
+      "causing": "gdp",
+      "caused": "unemployment",
+      "fstat": 3.193495628723102,
+      "pvalue": 0.014567184492084828,
+      "wald_stat": 13.987154038653141,
+      "wald_pvalue": 0.007336167785938819,
+      "reject_5pct": true
+    },
+    {
+      "causing": "inflation",
+      "caused": "gdp",
+      "fstat": 0.45341795919425587,
+      "pvalue": 0.7698119792270535,
+      "wald_stat": 1.9859200000463497,
+      "wald_pvalue": 0.7383487321317161,
+      "reject_5pct": false
+    },
+    {
+      "causing": "inflation",
+      "caused": "fed_funds",
+      "fstat": 1.9174568697690266,
+      "pvalue": 0.10944892294202402,
+      "wald_stat": 8.3982468485973,
+      "wald_pvalue": 0.07803222589071701,
+      "reject_5pct": false
+    },
+    {
+      "causing": "inflation",
+      "caused": "unemployment",
+      "fstat": 0.25552427927697124,
+      "pvalue": 0.9060024418016427,
+      "wald_stat": 1.119167793034332,
+      "wald_pvalue": 0.8912192198014982,
+      "reject_5pct": false
+    },
+    {
+      "causing": "fed_funds",
+      "caused": "gdp",
+      "fstat": 2.692057374069604,
+      "pvalue": 0.03259462052157247,
+      "wald_stat": 11.79091050989145,
+      "wald_pvalue": 0.018975763505670318,
+      "reject_5pct": true
+    },
+    {
+      "causing": "fed_funds",
+      "caused": "inflation",
+      "fstat": 0.3132169289041407,
+      "pvalue": 0.8688866329713942,
+      "wald_stat": 1.371855152295231,
+      "wald_pvalue": 0.8490716748909939,
+      "reject_5pct": false
+    },
+    {
+      "causing": "fed_funds",
+      "caused": "unemployment",
+      "fstat": 1.3653502769247852,
+      "pvalue": 0.24778727148132162,
+      "wald_stat": 5.980081659826992,
+      "wald_pvalue": 0.200640733447788,
+      "reject_5pct": false
+    },
+    {
+      "causing": "unemployment",
+      "caused": "gdp",
+      "fstat": 0.588611694739283,
+      "pvalue": 0.6712977886280618,
+      "wald_stat": 2.578053456288256,
+      "wald_pvalue": 0.6307157392192373,
+      "reject_5pct": false
+    },
+    {
+      "causing": "unemployment",
+      "caused": "inflation",
+      "fstat": 1.3726015202552964,
+      "pvalue": 0.24523886004290985,
+      "wald_stat": 6.0118412954198455,
+      "wald_pvalue": 0.19826570191169812,
+      "reject_5pct": false
+    },
+    {
+      "causing": "unemployment",
+      "caused": "fed_funds",
+      "fstat": 0.33191516896165796,
+      "pvalue": 0.8562439048301582,
+      "wald_stat": 1.4537513545583232,
+      "wald_pvalue": 0.8348010313081278,
+      "reject_5pct": false
+    }
+  ],
+  "summary": {
+    "n_significant_5pct": 3,
+    "n_total_tests": 12,
+    "fed_funds_to_gdp_pvalue": 0.03259462052157247,
+    "fed_funds_to_inflation_pvalue": 0.8688866329713942,
+    "fed_funds_to_unemployment_pvalue": 0.24778727148132162
+  }
+}

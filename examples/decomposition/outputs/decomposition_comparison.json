@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "description": "Metricas comparativas de metodos de decomposicao",
+    "datasets": [
+      "airline.csv",
+      "co2.csv",
+      "brazil_ipca.csv"
+    ],
+    "methods": [
+      "ClassicalDecomposition",
+      "STL",
+      "X-13 (proxy STL robust)"
+    ],
+    "seed": 42
+  },
+  "airline": {
+    "classica_mult": {
+      "method": "Classica Mult.",
+      "residual_std": 0.033262,
+      "residual_mad": 0.016955,
+      "seasonal_range": 0.425377,
+      "trend_range": 348.25,
+      "n_missing": 12
+    },
+    "stl_log": {
+      "method": "STL (log)",
+      "residual_std": 0.026578,
+      "residual_mad": 0.009691,
+      "seasonal_range": 0.512527,
+      "trend_range": 367.9503,
+      "n_missing": 0
+    },
+    "stl-proxy_s=13,_robust": {
+      "method": "STL-proxy (s=13, robust)",
+      "residual_std": 0.025825,
+      "residual_mad": 0.011522,
+      "seasonal_range": 0.510237,
+      "trend_range": 366.737,
+      "n_missing": 0
+    }
+  },
+  "ipca": {
+    "stl_s7": {
+      "method": "STL s=7",
+      "residual_std": 0.122525,
+      "residual_mad": 0.081602,
+      "seasonal_range": 0.746853,
+      "trend_range": 0.36256,
+      "sa_smoothness": 0.119454,
+      "sa_volatility": 0.15721
+    },
+    "stl_s13_robust": {
+      "method": "STL s=13 (robust)",
+      "residual_std": 0.14784,
+      "residual_mad": 0.071518,
+      "seasonal_range": 0.600836,
+      "trend_range": 0.389999,
+      "sa_smoothness": 0.141391,
+      "sa_volatility": 0.173648
+    },
+    "stl_s25": {
+      "method": "STL s=25",
+      "residual_std": 0.136836,
+      "residual_mad": 0.097347,
+      "seasonal_range": 0.542272,
+      "trend_range": 0.395839,
+      "sa_smoothness": 0.134615,
+      "sa_volatility": 0.172152
+    },
+    "correlations": {
+      "stl_s7_vs_stl_s13_robust": 0.940344,
+      "stl_s7_vs_stl_s25": 0.949118,
+      "stl_s13_robust_vs_stl_s25": 0.959943
+    }
+  }
+}

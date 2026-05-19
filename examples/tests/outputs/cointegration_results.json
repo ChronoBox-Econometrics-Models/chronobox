@@ -1,0 +1,945 @@
+{
+  "metadata": {
+    "notebook": "03_cointegration_solution",
+    "tests": [
+      "Engle-Granger",
+      "Phillips-Ouliaris",
+      "Johansen"
+    ],
+    "seed": 42,
+    "n_synthetic": 200
+  },
+  "integration_check": [
+    {
+      "series": "y (cointegrado)",
+      "adf_level_stat": -1.3885951291808873,
+      "adf_level_p": 0.5145600690167281,
+      "adf_diff_stat": -9.013421993772754,
+      "adf_diff_p": 0.005,
+      "order": "I(1)"
+    },
+    {
+      "series": "x (cointegrado)",
+      "adf_level_stat": -1.3020945609388257,
+      "adf_level_p": 0.5448200350619107,
+      "adf_diff_stat": -9.134204900800565,
+      "adf_diff_p": 0.005,
+      "order": "I(1)"
+    },
+    {
+      "series": "y_indep1",
+      "adf_level_stat": 0.2970134425583096,
+      "adf_level_p": 0.99,
+      "adf_diff_stat": -12.920422349121866,
+      "adf_diff_p": 0.005,
+      "order": "I(1)"
+    },
+    {
+      "series": "y_indep2",
+      "adf_level_stat": -1.0590164582337396,
+      "adf_level_p": 0.6297777043922159,
+      "adf_diff_stat": -13.652697477172177,
+      "adf_diff_p": 0.005,
+      "order": "I(1)"
+    }
+  ],
+  "engle_granger_results": [
+    {
+      "test": "Engle-Granger",
+      "pair": "Par cointegrado (beta=1.5)",
+      "trend": "c",
+      "statistic": -10.172134995503548,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9537929875508198,
+        "5%": -3.367911686573571,
+        "10%": -3.0667919294967296
+      },
+      "lags_used": 0,
+      "reject_at_5pct": true,
+      "decision": "Cointegradas",
+      "cointegrating_vector": [
+        1.4884373198269618
+      ]
+    },
+    {
+      "test": "Engle-Granger",
+      "pair": "Series independentes",
+      "trend": "c",
+      "statistic": -2.402757486234981,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9543458708031642,
+        "5%": -3.36822072972764,
+        "10%": -3.0670024684995747
+      },
+      "lags_used": 2,
+      "reject_at_5pct": false,
+      "decision": "Nao cointegradas",
+      "cointegrating_vector": [
+        1.184751132846264
+      ]
+    },
+    {
+      "test": "Engle-Granger",
+      "pair": "Cointegrado (trend=n)",
+      "trend": "n",
+      "statistic": -10.165583113933547,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9537929875508198,
+        "5%": -3.367911686573571,
+        "10%": -3.0667919294967296
+      },
+      "lags_used": 0,
+      "reject_at_5pct": true,
+      "decision": "Cointegradas",
+      "cointegrating_vector": [
+        1.490763370272766
+      ]
+    },
+    {
+      "test": "Engle-Granger",
+      "pair": "Cointegrado (trend=c)",
+      "trend": "c",
+      "statistic": -10.172134995503548,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9537929875508198,
+        "5%": -3.367911686573571,
+        "10%": -3.0667919294967296
+      },
+      "lags_used": 0,
+      "reject_at_5pct": true,
+      "decision": "Cointegradas",
+      "cointegrating_vector": [
+        1.4884373198269618
+      ]
+    },
+    {
+      "test": "Engle-Granger",
+      "pair": "Cointegrado (trend=ct)",
+      "trend": "ct",
+      "statistic": -10.167376972727817,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9537929875508198,
+        "5%": -3.367911686573571,
+        "10%": -3.0667919294967296
+      },
+      "lags_used": 0,
+      "reject_at_5pct": true,
+      "decision": "Cointegradas",
+      "cointegrating_vector": [
+        1.4840790213589503
+      ]
+    },
+    {
+      "test": "Engle-Granger",
+      "pair": "PIB Brasil ~ PIB EUA",
+      "trend": "c",
+      "statistic": -1.4679652087345145,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9907416213544242,
+        "5%": -3.3884769931502015,
+        "10%": -3.0807979097521363
+      },
+      "lags_used": 0,
+      "reject_at_5pct": false,
+      "decision": "Nao cointegradas",
+      "cointegrating_vector": [
+        1.0104577413408082
+      ]
+    }
+  ],
+  "phillips_ouliaris_results": [
+    {
+      "test": "Phillips-Ouliaris",
+      "pair": "Par cointegrado",
+      "trend": "c",
+      "statistic": -10.064873155720077,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9537929875508198,
+        "5%": -3.367911686573571,
+        "10%": -3.0667919294967296
+      },
+      "reject_at_5pct": true,
+      "decision": "Cointegradas"
+    },
+    {
+      "test": "Phillips-Ouliaris",
+      "pair": "Series independentes",
+      "trend": "c",
+      "statistic": -2.2080570579662115,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9537929875508198,
+        "5%": -3.367911686573571,
+        "10%": -3.0667919294967296
+      },
+      "reject_at_5pct": false,
+      "decision": "Nao cointegradas"
+    },
+    {
+      "test": "Phillips-Ouliaris",
+      "pair": "PIB Brasil ~ PIB EUA",
+      "trend": "c",
+      "statistic": -1.5821081224556435,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9907416213544242,
+        "5%": -3.3884769931502015,
+        "10%": -3.0807979097521363
+      },
+      "reject_at_5pct": false,
+      "decision": "Nao cointegradas"
+    }
+  ],
+  "johansen_results": [
+    {
+      "test": "Johansen",
+      "system": "Par cointegrado",
+      "lags": 2,
+      "deterministic": "ci",
+      "n_variables": 2,
+      "eigenvalues": [
+        0.29104083387038915,
+        0.01102782570686967
+      ],
+      "trace_stats": [
+        70.29919327247866,
+        2.1956384239476665
+      ],
+      "trace_crit_95": [
+        19.96,
+        9.24
+      ],
+      "max_eig_stats": [
+        68.10355484853099,
+        2.1956384239476665
+      ],
+      "max_eig_crit_95": [
+        15.67,
+        9.24
+      ],
+      "rank_trace": 1,
+      "rank_maxeig": 1,
+      "eigenvectors": [
+        [
+          -2.3091293913630606,
+          3.4425217167105053,
+          -0.05032847181222258
+        ],
+        [
+          0.03449661087512052,
+          0.14661658304158265,
+          0.9411366586757773
+        ]
+      ],
+      "nobs": 198
+    },
+    {
+      "test": "Johansen",
+      "system": "Series independentes",
+      "lags": 2,
+      "deterministic": "ci",
+      "n_variables": 2,
+      "eigenvalues": [
+        0.0657689714972616,
+        0.03757529674522858
+      ],
+      "trace_stats": [
+        21.05353082208446,
+        7.58329036047137
+      ],
+      "trace_crit_95": [
+        19.96,
+        9.24
+      ],
+      "max_eig_stats": [
+        13.47024046161309,
+        7.58329036047137
+      ],
+      "max_eig_crit_95": [
+        15.67,
+        9.24
+      ],
+      "rank_trace": 1,
+      "rank_maxeig": 0,
+      "eigenvectors": [
+        [
+          0.017058458709898694,
+          -0.026632931081858637,
+          -1.1776676085634428
+        ],
+        [
+          -0.19076668374984493,
+          0.2743300506146309,
+          1.023318282643407
+        ]
+      ],
+      "nobs": 198
+    },
+    {
+      "test": "Johansen",
+      "system": "Cointegrado (det=nc)",
+      "lags": 2,
+      "deterministic": "nc",
+      "n_variables": 2,
+      "eigenvalues": [
+        0.2905553512334025,
+        0.00443225829316235
+      ],
+      "trace_stats": [
+        68.84755212441655,
+        0.879537754369321
+      ],
+      "trace_crit_95": [
+        15.41,
+        3.76
+      ],
+      "max_eig_stats": [
+        67.96801437004723,
+        0.879537754369321
+      ],
+      "max_eig_crit_95": [
+        14.07,
+        3.76
+      ],
+      "rank_trace": 1,
+      "rank_maxeig": 1,
+      "eigenvectors": [
+        [
+          2.3072872681778422,
+          -3.444757369438168
+        ],
+        [
+          -0.061447792545894275,
+          -0.07759886795446135
+        ]
+      ],
+      "nobs": 198
+    },
+    {
+      "test": "Johansen",
+      "system": "Cointegrado (det=ci)",
+      "lags": 2,
+      "deterministic": "ci",
+      "n_variables": 2,
+      "eigenvalues": [
+        0.29104083387038915,
+        0.01102782570686967
+      ],
+      "trace_stats": [
+        70.29919327247866,
+        2.1956384239476665
+      ],
+      "trace_crit_95": [
+        19.96,
+        9.24
+      ],
+      "max_eig_stats": [
+        68.10355484853099,
+        2.1956384239476665
+      ],
+      "max_eig_crit_95": [
+        15.67,
+        9.24
+      ],
+      "rank_trace": 1,
+      "rank_maxeig": 1,
+      "eigenvectors": [
+        [
+          -2.3091293913630606,
+          3.4425217167105053,
+          -0.05032847181222258
+        ],
+        [
+          0.03449661087512052,
+          0.14661658304158265,
+          0.9411366586757773
+        ]
+      ],
+      "nobs": 198
+    },
+    {
+      "test": "Johansen",
+      "system": "Cointegrado (det=co)",
+      "lags": 2,
+      "deterministic": "co",
+      "n_variables": 2,
+      "eigenvalues": [
+        0.2909864807372812,
+        0.010207689894823721
+      ],
+      "trace_stats": [
+        70.11988437858044,
+        2.0315088356475335
+      ],
+      "trace_crit_95": [
+        17.95,
+        8.18
+      ],
+      "max_eig_stats": [
+        68.08837554293291,
+        2.0315088356475335
+      ],
+      "max_eig_crit_95": [
+        14.9,
+        8.18
+      ],
+      "rank_trace": 1,
+      "rank_maxeig": 1,
+      "eigenvectors": [
+        [
+          2.3094286277703073,
+          -3.4429924082010004
+        ],
+        [
+          0.04684051312224954,
+          0.1361014574215056
+        ]
+      ],
+      "nobs": 198
+    },
+    {
+      "test": "Johansen",
+      "system": "PIB Brasil x EUA",
+      "lags": 4,
+      "deterministic": "ci",
+      "n_variables": 2,
+      "eigenvalues": [
+        0.2394919476405005,
+        0.01923525948622127
+      ],
+      "trace_stats": [
+        34.01018421841351,
+        2.253029043402002
+      ],
+      "trace_crit_95": [
+        19.96,
+        9.24
+      ],
+      "max_eig_stats": [
+        31.75715517501151,
+        2.253029043402002
+      ],
+      "max_eig_crit_95": [
+        15.67,
+        9.24
+      ],
+      "rank_trace": 1,
+      "rank_maxeig": 1,
+      "eigenvectors": [
+        [
+          -1.1095139104061977,
+          2.177011390901165,
+          -10.795633795989607
+        ],
+        [
+          -26.162188420880252,
+          25.007032154234395,
+          -51.911015464931545
+        ]
+      ],
+      "nobs": 116
+    },
+    {
+      "test": "Johansen",
+      "system": "Sistema trivariado (rank esperado=1)",
+      "lags": 2,
+      "deterministic": "ci",
+      "n_variables": 3,
+      "eigenvalues": [
+        0.30521738580502644,
+        0.047615850408879105,
+        0.009300477545863607
+      ],
+      "trace_stats": [
+        83.61284021882393,
+        11.509899219005108,
+        1.8501114123358948
+      ],
+      "trace_crit_95": [
+        34.91,
+        19.96,
+        9.24
+      ],
+      "max_eig_stats": [
+        72.10294099981883,
+        9.659787806669213,
+        1.8501114123358948
+      ],
+      "max_eig_crit_95": [
+        22.0,
+        15.67,
+        9.24
+      ],
+      "rank_trace": 1,
+      "rank_maxeig": 1,
+      "eigenvectors": [
+        [
+          -2.3377224729157957,
+          4.636799585178734,
+          0.056010260146948015,
+          -0.45000607245541013
+        ],
+        [
+          -0.016853455026578937,
+          0.23294359344611423,
+          -0.25596903036013174,
+          2.2303393335790886
+        ],
+        [
+          0.08163126090602695,
+          -0.04721387251362242,
+          0.14708846309297516,
+          -0.20490928990856835
+        ]
+      ],
+      "nobs": 198
+    },
+    {
+      "test": "Johansen",
+      "system": "3 series com trend comum (rank esperado=2)",
+      "lags": 2,
+      "deterministic": "ci",
+      "n_variables": 3,
+      "eigenvalues": [
+        0.3371617796377409,
+        0.25491319548548347,
+        0.01042881143304008
+      ],
+      "trace_stats": [
+        141.76056587293473,
+        60.33814851473845,
+        2.0757473646275333
+      ],
+      "trace_crit_95": [
+        34.91,
+        19.96,
+        9.24
+      ],
+      "max_eig_stats": [
+        81.42241735819628,
+        58.26240115011092,
+        2.0757473646275333
+      ],
+      "max_eig_crit_95": [
+        22.0,
+        15.67,
+        9.24
+      ],
+      "rank_trace": 2,
+      "rank_maxeig": 2,
+      "eigenvectors": [
+        [
+          0.5982032918137475,
+          1.095182092631802,
+          -3.9116380235553594,
+          -0.13432257218631807
+        ],
+        [
+          3.3509967198826507,
+          -2.471126464134166,
+          -0.13442707474217658,
+          -0.09411149014496151
+        ],
+        [
+          0.004671909724911503,
+          0.1390796005523319,
+          -0.11151063159845853,
+          0.9435508372637688
+        ]
+      ],
+      "nobs": 198
+    }
+  ],
+  "gdp_cointegration": {
+    "engle_granger": {
+      "test": "Engle-Granger",
+      "pair": "PIB Brasil ~ PIB EUA",
+      "trend": "c",
+      "statistic": -1.4679652087345145,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9907416213544242,
+        "5%": -3.3884769931502015,
+        "10%": -3.0807979097521363
+      },
+      "lags_used": 0,
+      "reject_at_5pct": false,
+      "decision": "Nao cointegradas",
+      "cointegrating_vector": [
+        1.0104577413408082
+      ]
+    },
+    "phillips_ouliaris": {
+      "test": "Phillips-Ouliaris",
+      "pair": "PIB Brasil ~ PIB EUA",
+      "trend": "c",
+      "statistic": -1.5821081224556435,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.9907416213544242,
+        "5%": -3.3884769931502015,
+        "10%": -3.0807979097521363
+      },
+      "reject_at_5pct": false,
+      "decision": "Nao cointegradas"
+    },
+    "johansen": {
+      "test": "Johansen",
+      "system": "PIB Brasil x EUA",
+      "lags": 4,
+      "deterministic": "ci",
+      "n_variables": 2,
+      "eigenvalues": [
+        0.2394919476405005,
+        0.01923525948622127
+      ],
+      "trace_stats": [
+        34.01018421841351,
+        2.253029043402002
+      ],
+      "trace_crit_95": [
+        19.96,
+        9.24
+      ],
+      "max_eig_stats": [
+        31.75715517501151,
+        2.253029043402002
+      ],
+      "max_eig_crit_95": [
+        15.67,
+        9.24
+      ],
+      "rank_trace": 1,
+      "rank_maxeig": 1,
+      "eigenvectors": [
+        [
+          -1.1095139104061977,
+          2.177011390901165,
+          -10.795633795989607
+        ],
+        [
+          -26.162188420880252,
+          25.007032154234395,
+          -51.911015464931545
+        ]
+      ],
+      "nobs": 116
+    }
+  },
+  "exercise1_beta_sigma": [
+    {
+      "beta": 0.5,
+      "sigma_eq": 0.1,
+      "signal_noise_ratio": 5.0,
+      "eg_statistic": -10.172134995503548,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327255062
+    },
+    {
+      "beta": 0.5,
+      "sigma_eq": 0.5,
+      "signal_noise_ratio": 1.0,
+      "eg_statistic": -10.172134995503548,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327245656
+    },
+    {
+      "beta": 0.5,
+      "sigma_eq": 1.0,
+      "signal_noise_ratio": 0.5,
+      "eg_statistic": -8.956267443355552,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327245406
+    },
+    {
+      "beta": 0.5,
+      "sigma_eq": 2.0,
+      "signal_noise_ratio": 0.25,
+      "eg_statistic": -4.793042902345855,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.2991932724551
+    },
+    {
+      "beta": 1.0,
+      "sigma_eq": 0.1,
+      "signal_noise_ratio": 10.0,
+      "eg_statistic": -10.17213499550356,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327235251
+    },
+    {
+      "beta": 1.0,
+      "sigma_eq": 0.5,
+      "signal_noise_ratio": 2.0,
+      "eg_statistic": -10.17213499550355,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327246229
+    },
+    {
+      "beta": 1.0,
+      "sigma_eq": 1.0,
+      "signal_noise_ratio": 1.0,
+      "eg_statistic": -8.956267443355552,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327245594
+    },
+    {
+      "beta": 1.0,
+      "sigma_eq": 2.0,
+      "signal_noise_ratio": 0.5,
+      "eg_statistic": -4.79304290234586,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327245423
+    },
+    {
+      "beta": 2.0,
+      "sigma_eq": 0.1,
+      "signal_noise_ratio": 20.0,
+      "eg_statistic": -10.172134995503557,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.2991932730494
+    },
+    {
+      "beta": 2.0,
+      "sigma_eq": 0.5,
+      "signal_noise_ratio": 4.0,
+      "eg_statistic": -10.17213499550355,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327247678
+    },
+    {
+      "beta": 2.0,
+      "sigma_eq": 1.0,
+      "signal_noise_ratio": 2.0,
+      "eg_statistic": -8.95626744335556,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.2991932724646
+    },
+    {
+      "beta": 2.0,
+      "sigma_eq": 2.0,
+      "signal_noise_ratio": 1.0,
+      "eg_statistic": -4.793042902345877,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327245594
+    },
+    {
+      "beta": 3.0,
+      "sigma_eq": 0.1,
+      "signal_noise_ratio": 30.0,
+      "eg_statistic": -10.172134995503557,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327469175
+    },
+    {
+      "beta": 3.0,
+      "sigma_eq": 0.5,
+      "signal_noise_ratio": 6.0,
+      "eg_statistic": -10.172134995503553,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327262976
+    },
+    {
+      "beta": 3.0,
+      "sigma_eq": 1.0,
+      "signal_noise_ratio": 3.0,
+      "eg_statistic": -8.956267443355554,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327247866
+    },
+    {
+      "beta": 3.0,
+      "sigma_eq": 2.0,
+      "signal_noise_ratio": 1.5,
+      "eg_statistic": -4.793042902345858,
+      "eg_pvalue": null,
+      "eg_reject": true,
+      "johansen_rank_trace": 1,
+      "johansen_trace_stat": 70.29919327245335
+    }
+  ],
+  "exercise2_trivariate": {
+    "rank_1_system": {
+      "test": "Johansen",
+      "system": "Sistema trivariado (rank esperado=1)",
+      "lags": 2,
+      "deterministic": "ci",
+      "n_variables": 3,
+      "eigenvalues": [
+        0.30521738580502644,
+        0.047615850408879105,
+        0.009300477545863607
+      ],
+      "trace_stats": [
+        83.61284021882393,
+        11.509899219005108,
+        1.8501114123358948
+      ],
+      "trace_crit_95": [
+        34.91,
+        19.96,
+        9.24
+      ],
+      "max_eig_stats": [
+        72.10294099981883,
+        9.659787806669213,
+        1.8501114123358948
+      ],
+      "max_eig_crit_95": [
+        22.0,
+        15.67,
+        9.24
+      ],
+      "rank_trace": 1,
+      "rank_maxeig": 1,
+      "eigenvectors": [
+        [
+          -2.3377224729157957,
+          4.636799585178734,
+          0.056010260146948015,
+          -0.45000607245541013
+        ],
+        [
+          -0.016853455026578937,
+          0.23294359344611423,
+          -0.25596903036013174,
+          2.2303393335790886
+        ],
+        [
+          0.08163126090602695,
+          -0.04721387251362242,
+          0.14708846309297516,
+          -0.20490928990856835
+        ]
+      ],
+      "nobs": 198
+    },
+    "rank_2_system": {
+      "test": "Johansen",
+      "system": "3 series com trend comum (rank esperado=2)",
+      "lags": 2,
+      "deterministic": "ci",
+      "n_variables": 3,
+      "eigenvalues": [
+        0.3371617796377409,
+        0.25491319548548347,
+        0.01042881143304008
+      ],
+      "trace_stats": [
+        141.76056587293473,
+        60.33814851473845,
+        2.0757473646275333
+      ],
+      "trace_crit_95": [
+        34.91,
+        19.96,
+        9.24
+      ],
+      "max_eig_stats": [
+        81.42241735819628,
+        58.26240115011092,
+        2.0757473646275333
+      ],
+      "max_eig_crit_95": [
+        22.0,
+        15.67,
+        9.24
+      ],
+      "rank_trace": 2,
+      "rank_maxeig": 2,
+      "eigenvectors": [
+        [
+          0.5982032918137475,
+          1.095182092631802,
+          -3.9116380235553594,
+          -0.13432257218631807
+        ],
+        [
+          3.3509967198826507,
+          -2.471126464134166,
+          -0.13442707474217658,
+          -0.09411149014496151
+        ],
+        [
+          0.004671909724911503,
+          0.1390796005523319,
+          -0.11151063159845853,
+          0.9435508372637688
+        ]
+      ],
+      "nobs": 198
+    }
+  },
+  "summary_table": [
+    {
+      "Par/Sistema": "Par cointegrado (beta=1.5)",
+      "EG stat": "-10.1721",
+      "EG p": "N/A",
+      "EG rej": "Sim",
+      "PO stat": "-10.0649",
+      "PO rej": "Sim",
+      "Joh rank": 1,
+      "Joh trace[0]": "70.2992",
+      "Decisao Final": "Cointegradas"
+    },
+    {
+      "Par/Sistema": "Series independentes",
+      "EG stat": "-2.4028",
+      "EG p": "N/A",
+      "EG rej": "Nao",
+      "PO stat": "-2.2081",
+      "PO rej": "Nao",
+      "Joh rank": 1,
+      "Joh trace[0]": "21.0535",
+      "Decisao Final": "Nao cointegradas"
+    },
+    {
+      "Par/Sistema": "PIB Brasil x EUA",
+      "EG stat": "-1.4680",
+      "EG p": "N/A",
+      "EG rej": "Nao",
+      "PO stat": "-1.5821",
+      "PO rej": "Nao",
+      "Joh rank": 1,
+      "Joh trace[0]": "46.6047",
+      "Decisao Final": "Nao cointegradas"
+    }
+  ]
+}

@@ -474,7 +474,10 @@ class VARResults:
 
         if z_parts:
             z_mat = np.column_stack(z_parts)
-            ztz_inv = np.linalg.inv(z_mat.T @ z_mat)
+            try:
+                ztz_inv = np.linalg.inv(z_mat.T @ z_mat)
+            except np.linalg.LinAlgError:
+                ztz_inv = np.linalg.pinv(z_mat.T @ z_mat)
         else:
             ztz_inv = np.zeros((1, 1))
 

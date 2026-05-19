@@ -1,0 +1,98 @@
+"workflow","category","metric","python","R","diferenca_absoluta","tolerance","tolerance_type","within_tolerance"
+"univariate","Unit Root","adf_raw_statistic",0.815368879206023,-7.3186,8.13396887920602,0.5,"unit_root_statistic",FALSE
+"univariate","Unit Root","adf_raw_pvalue",0.99,0.01,0.98,0.1,"unit_root_pvalue",FALSE
+"univariate","Unit Root","adf_log_statistic",-1.71701708910671,-6.4215,4.70448291089329,0.5,"unit_root_statistic",FALSE
+"univariate","Unit Root","adf_log_pvalue",0.400675061340489,0.01,0.390675061340489,0.1,"unit_root_pvalue",FALSE
+"univariate","Unit Root","kpss_raw_statistic",2.73947362096219,2.7395,2.6379037814106e-05,0.5,"unit_root_statistic",TRUE
+"univariate","Unit Root","kpss_raw_pvalue",0.005,0.01,0.005,0.1,"unit_root_pvalue",TRUE
+"univariate","Unit Root","kpss_log_statistic",2.8286747955542,2.8287,2.52044457957901e-05,0.5,"unit_root_statistic",TRUE
+"univariate","Unit Root","kpss_log_pvalue",0.005,0.01,0.005,0.1,"unit_root_pvalue",TRUE
+"univariate","Unit Root","adf_diff_log_statistic",-3.05303201091532,-6.4313,3.37826798908468,0.5,"unit_root_statistic",FALSE
+"univariate","Unit Root","adf_diff_log_pvalue",0.0386671174117872,0.01,0.0286671174117872,0.1,"unit_root_pvalue",TRUE
+"univariate","Unit Root","adf_diff_seasonal_log_statistic",-16.775530218837,-5.1993,11.576230218837,0.5,"unit_root_statistic",FALSE
+"univariate","Unit Root","adf_diff_seasonal_log_pvalue",0.005,0.01,0.005,0.1,"unit_root_pvalue",TRUE
+"univariate","Unit Root","zivot_andrews_statistic",-3.99716636919623,-5.4683,1.47113363080377,0.5,"unit_root_statistic",FALSE
+"univariate","Models","ETS_AIC",965.996009164731,1244.4579942902,278.461985125469,10,"model_aic",FALSE
+"univariate","Models","ETS_BIC",1015.0036418487,1296.34842889675,281.34478704805,10,"model_bic",FALSE
+"univariate","Models","ETS_RMSE",26.0507500493748,27.3980396702912,1.34728962091643,5,"forecast_rmse",TRUE
+"univariate","Models","ETS_MAE",20.8729717840007,22.8045023369216,1.9315305529209,5,"forecast_mae",TRUE
+"univariate","Models","HW_RMSE",54.9072534842039,31.9824739961026,22.9247794881013,5,"forecast_rmse",FALSE
+"univariate","Models","HW_MAE",46.5521763293274,24.1723570678754,22.379819261452,5,"forecast_mae",FALSE
+"univariate","Models","Theta_RMSE",96.8878904949594,30.7180738595988,66.1698166353606,5,"forecast_rmse",FALSE
+"univariate","Models","Theta_MAE",70.4740929055194,26.3345932156034,44.139499689916,5,"forecast_mae",FALSE
+"univariate","Forecasts","ETS_forecast_h1",442.768453018341,441.801847278479,0.966605739862246,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h2",435.900093134432,434.118620068782,1.78147306564972,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h3",498.826885550205,496.630046776999,2.19683877320568,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h4",485.961399263025,483.23747944576,2.72391981726469,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h5",487.564187160455,483.991353446536,3.57283371391901,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h6",554.069162793334,551.024400008046,3.04476278528853,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h7",617.476653422911,613.179679246499,4.29697417641194,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h8",614.180546041064,609.364830849264,4.81571519179977,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h9",534.269874369375,530.540834527191,3.72903984218408,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h10",467.016070217006,463.03321448673,3.98285573027624,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h11",406.252290849565,402.747800050565,3.50449079900011,20,"forecast_value",TRUE
+"univariate","Forecasts","ETS_forecast_h12",457.391667732238,451.969373093448,5.42229463878954,20,"forecast_value",TRUE
+"multivariate","Unit Root","gdp_adf_statistic",-8.91166594830565,-4.5446,4.36706594830565,0.5,"unit_root_statistic",FALSE
+"multivariate","Unit Root","gdp_adf_pvalue",0.005,0.01,0.005,0.1,"unit_root_pvalue",TRUE
+"multivariate","Unit Root","gdp_kpss_statistic",0.182584602593088,0.1826,1.53974069123375e-05,0.5,"unit_root_statistic",TRUE
+"multivariate","Unit Root","gdp_kpss_pvalue",0.15,0.1,0.05,0.1,"unit_root_pvalue",TRUE
+"multivariate","Unit Root","inflation_adf_statistic",-5.9903377041268,-5.9968,0.00646229587320235,0.5,"unit_root_statistic",TRUE
+"multivariate","Unit Root","inflation_adf_pvalue",0.005,0.01,0.005,0.1,"unit_root_pvalue",TRUE
+"multivariate","Unit Root","inflation_kpss_statistic",0.530610269065883,0.5306,1.02690658826399e-05,0.5,"unit_root_statistic",TRUE
+"multivariate","Unit Root","inflation_kpss_pvalue",0.0347724619220985,0.0348,2.75380779014844e-05,0.1,"unit_root_pvalue",TRUE
+"multivariate","Unit Root","fed_funds_adf_statistic",-3.46051627622265,-3.2572,0.203316276222647,0.5,"unit_root_statistic",TRUE
+"multivariate","Unit Root","fed_funds_adf_pvalue",0.0102805629920895,0.0799,0.0696194370079105,0.1,"unit_root_pvalue",TRUE
+"multivariate","Unit Root","fed_funds_kpss_statistic",0.489155132580751,0.4892,4.48674192490839e-05,0.5,"unit_root_statistic",TRUE
+"multivariate","Unit Root","fed_funds_kpss_pvalue",0.0441092043737047,0.0441,9.20437370474647e-06,0.1,"unit_root_pvalue",TRUE
+"multivariate","Unit Root","unemployment_adf_statistic",-3.26922355606677,-2.7633,0.50592355606677,0.5,"unit_root_statistic",FALSE
+"multivariate","Unit Root","unemployment_adf_pvalue",0.0232736911144696,0.2564,0.23312630888553,0.1,"unit_root_pvalue",FALSE
+"multivariate","Unit Root","unemployment_kpss_statistic",0.661464458751376,0.6615,3.5541248623483e-05,0.5,"unit_root_statistic",TRUE
+"multivariate","Unit Root","unemployment_kpss_pvalue",0.0170486855680567,0.017,4.86855680566778e-05,0.1,"unit_root_pvalue",TRUE
+"multivariate","Model Selection","VAR1_AIC",-6.59940776910021,-6.5601,0.0393077691002075,10,"model_aic",TRUE
+"multivariate","Model Selection","VAR1_BIC",-6.33461944148417,-6.2207,0.113919441484168,10,"model_bic",TRUE
+"multivariate","Cointegration","rank_trace",3,2,1,1,"cointegration_rank",TRUE
+"multivariate","Spillover","total_spillover_index",19.3989578930917,17.2566,2.14235789309168,5,"spillover_index",TRUE
+"multivariate","Spillover","gdp_from_others",3.13877413923511,0.3184,2.82037413923511,5,"spillover_index",TRUE
+"multivariate","Spillover","gdp_to_others",10.4385762678723,48.6112,38.1726237321277,5,"spillover_index",FALSE
+"multivariate","Spillover","inflation_from_others",2.58375242227691,6.9834,4.39964757772309,5,"spillover_index",TRUE
+"multivariate","Spillover","inflation_to_others",3.91226698883826,13.6135,9.70123301116174,5,"spillover_index",FALSE
+"multivariate","Spillover","fed_funds_from_others",6.42977544402672,24.5447,18.1149245559733,5,"spillover_index",FALSE
+"multivariate","Spillover","fed_funds_to_others",0.900712316172539,3.0414,2.14068768382746,5,"spillover_index",TRUE
+"multivariate","Spillover","unemployment_from_others",7.24665588755295,37.1798,29.9331441124471,5,"spillover_index",FALSE
+"multivariate","Spillover","unemployment_to_others",4.14740232020863,3.7602,0.387202320208629,5,"spillover_index",TRUE
+"multivariate","IRF (VAR)","h0_gdp->gdp",0.670451598807262,0.670451598807262,1.11022302462516e-16,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_inflation->gdp",0,0,0,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_fed_funds->gdp",0,0,0,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_unemployment->gdp",0,0,0,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_gdp->inflation",0.0767154628290121,0.076715462829012,8.32667268468867e-17,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_inflation->inflation",0.495223432094815,0.495223432094815,3.33066907387547e-16,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_fed_funds->inflation",0,0,0,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_unemployment->inflation",0,0,0,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_gdp->fed_funds",0.000463701457896,0.000463701457895981,1.89193279098721e-17,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_inflation->fed_funds",0.0423503176850549,0.042350317685055,1.2490009027033e-16,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_fed_funds->fed_funds",0.399241560498538,0.399241560498538,1.66533453693773e-16,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_unemployment->fed_funds",0,0,0,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_gdp->unemployment",-0.107044301808766,-0.107044301808766,5.55111512312578e-17,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_inflation->unemployment",0.0739128296252609,0.0739128296252606,2.4980018054066e-16,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_fed_funds->unemployment",-0.0586032524990273,-0.0586032524990275,1.52655665885959e-16,0.05,"irf_value",TRUE
+"multivariate","IRF (VAR)","h0_unemployment->unemployment",0.27023213586267,0.27023213586267,1.11022302462516e-16,0.05,"irf_value",TRUE
+"multivariate","IRF (BVAR)","h0_gdp->gdp",0.661975257969462,0.666999195187054,0.00502393721759198,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_inflation->gdp",0,0,0,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_fed_funds->gdp",0,0,0,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_unemployment->gdp",0,0,0,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_gdp->inflation",0.075745569682922,0.0717105343779398,0.00403503530498223,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_inflation->inflation",0.488962454257238,0.493732581133676,0.00477012687643807,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_fed_funds->inflation",0,0,0,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_unemployment->inflation",0,0,0,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_gdp->fed_funds",0.000457839003975333,-0.00277116699776399,0.00322900600173932,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_inflation->fed_funds",0.0418148939081167,0.0398792098753658,0.00193568403275087,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_fed_funds->fed_funds",0.394194055877144,0.394908145112528,0.000714089235384241,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_unemployment->fed_funds",0,0,0,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_gdp->unemployment",-0.105690969236378,-0.101032819517697,0.00465814971868117,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_inflation->unemployment",0.0729783694236527,0.0701008206237775,0.0028775487998752,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_fed_funds->unemployment",-0.0578623471998692,-0.0588642824826256,0.00100193528275644,0.15,"bvar_irf",TRUE
+"multivariate","IRF (BVAR)","h0_unemployment->unemployment",0.266815663006205,0.269154093143267,0.00233843013706214,0.15,"bvar_irf",TRUE
+"multivariate","Forecasts (VAR)","gdp_h1",3.28496153017381,3.2849615301738,5.32907051820075e-15,20,"forecast_value",TRUE
+"multivariate","Forecasts (VAR)","inflation_h1",3.56007381503848,3.56007381503848,1.33226762955019e-15,20,"forecast_value",TRUE
+"multivariate","Forecasts (VAR)","fed_funds_h1",6.48628075456643,6.48628075456643,0,20,"forecast_value",TRUE
+"multivariate","Forecasts (VAR)","unemployment_h1",10.3625097861051,10.3625097861051,2.30926389122033e-14,20,"forecast_value",TRUE

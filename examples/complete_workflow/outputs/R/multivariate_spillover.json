@@ -1,0 +1,15 @@
+{
+  "total_spillover": 17.2566,
+  "fevd_table": {
+    "gdp": [0.9968, 0.0007, 0.0021, 0.0004],
+    "inflation": [0.0564, 0.9302, 0.0006, 0.0129],
+    "fed_funds": [0.1158, 0.1053, 0.7546, 0.0243],
+    "unemployment": [0.3139, 0.0301, 0.0277, 0.6282]
+  },
+  "directional_from": [0.3184, 6.9834, 24.5447, 37.1798],
+  "directional_to": [48.6112, 13.6135, 3.0414, 3.7602],
+  "net_spillover": [48.2929, 6.6301, -21.5033, -33.4197],
+  "variables": ["gdp", "inflation", "fed_funds", "unemployment"],
+  "var_lags": 1,
+  "horizon": 10
+}

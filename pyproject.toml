@@ -49,6 +49,12 @@ dev = [
     "mkdocs-material>=9.0",
     "mkdocstrings[python]>=0.24",
 ]
+docs = [
+    "mkdocs-material>=9.5",
+    "mkdocstrings[python]>=0.24",
+    "pymdown-extensions>=10.0",
+    "mike>=2.0",
+]
 numba = [
     "numba>=0.57",
 ]

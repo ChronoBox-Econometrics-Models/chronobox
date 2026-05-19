@@ -1,0 +1,46 @@
+{
+  "datasets": [
+    {
+      "name": "airline",
+      "file": "airline.csv",
+      "description": "Classic Box-Jenkins airline passengers dataset",
+      "source": "Box, Jenkins & Reinsel (1976)",
+      "frequency": "monthly",
+      "n_obs": 144,
+      "variables": ["date", "passengers"],
+      "date_range": ["1949-01-01", "1960-12-01"],
+      "origin_phase": "F1 (ARIMA)",
+      "usage": ["univariate", "decomposition", "ets", "sarima"]
+    },
+    {
+      "name": "us_macro_quarterly",
+      "file": "us_macro_quarterly.csv",
+      "description": "US macroeconomic quarterly series (synthetic, seed=42)",
+      "source": "Synthetic based on stylized US macro facts",
+      "frequency": "quarterly",
+      "n_obs": 200,
+      "variables": ["date", "gdp", "inflation", "fed_funds", "unemployment"],
+      "date_range": ["1975-01-01", "2024-10-01"],
+      "origin_phase": "F5 (VAR/VECM)",
+      "usage": ["multivariate", "var", "vecm", "svar", "ardl", "spillover"]
+    },
+    {
+      "name": "brazil_gdp",
+      "file": "brazil_gdp.csv",
+      "description": "Brazilian real GDP quarterly series (synthetic, seed=42)",
+      "source": "Synthetic based on Brazilian GDP stylized facts",
+      "frequency": "quarterly",
+      "n_obs": 120,
+      "variables": ["date", "gdp_real", "gdp_log"],
+      "date_range": ["2000-01-01", "2029-10-01"],
+      "origin_phase": "F4 (Filters)",
+      "usage": ["univariate", "filters", "unit_root_tests"]
+    }
+  ],
+  "metadata": {
+    "total_datasets": 3,
+    "seed": 42,
+    "generated_by": "chronobox examples - complete workflow",
+    "description": "Index of all datasets used in the complete workflow examples. These are the core datasets aggregated from phases F1-F9."
+  }
+}

@@ -1,0 +1,844 @@
+{
+  "metadata": {
+    "notebook": "01_unit_root_adf_pp_solution",
+    "tests": [
+      "ADF",
+      "PP"
+    ],
+    "seed": 42,
+    "n_synthetic": 200
+  },
+  "adf_results": [
+    {
+      "test": "ADF",
+      "series": "I(0) sintetica",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": -6.664868655835712,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4648054678038602,
+        "5%": -2.876213891107733,
+        "10%": -2.5745149295266563
+      },
+      "lags_used": 2,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "I(1) sintetica - nivel",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": -1.3020945609388257,
+      "pvalue": 0.5448200350619107,
+      "critical_values": {
+        "1%": -3.4649685443565184,
+        "5%": -2.8762870054144107,
+        "10%": -2.5745533527696796
+      },
+      "lags_used": 3,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "I(1) sintetica - 1a diferenca",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": -9.134204900800565,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4649685443565184,
+        "5%": -2.8762870054144107,
+        "10%": -2.5745533527696796
+      },
+      "lags_used": 2,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "I(1) com drift - nivel",
+      "regression": "ct",
+      "autolag": "AIC",
+      "statistic": -1.8277235663146552,
+      "pvalue": 0.47620259353425054,
+      "critical_values": {
+        "1%": -4.0076522490628905,
+        "5%": -3.4336712723865057,
+        "10%": -3.1404340483132027
+      },
+      "lags_used": 3,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "I(1) com drift - 1a diferenca",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": -9.13420490080058,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4649685443565184,
+        "5%": -2.8762870054144107,
+        "10%": -2.5745533527696796
+      },
+      "lags_used": 2,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "I(2) sintetica - nivel",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": -0.6712941145108567,
+      "pvalue": 0.7653357651573671,
+      "critical_values": {
+        "1%": -3.4651333333333336,
+        "5%": -2.8763608809993424,
+        "10%": -2.5745921761998685
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "I(2) sintetica - 1a diferenca",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": -1.165819989037456,
+      "pvalue": 0.5924643911245007,
+      "critical_values": {
+        "1%": -3.4651333333333336,
+        "5%": -2.8763608809993424,
+        "10%": -2.5745921761998685
+      },
+      "lags_used": 3,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "I(2) sintetica - 2a diferenca",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": -9.187356503914963,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4651333333333336,
+        "5%": -2.8763608809993424,
+        "10%": -2.5745921761998685
+      },
+      "lags_used": 2,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    }
+  ],
+  "pp_results": [
+    {
+      "test": "PP",
+      "series": "I(0) sintetica",
+      "regression": "c",
+      "lags": "short",
+      "statistic": -6.151268927581098,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.46448434635489,
+        "5%": -2.8760698997500063,
+        "10%": -2.574439259109618
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "PP",
+      "series": "I(1) sintetica - nivel",
+      "regression": "c",
+      "lags": "short",
+      "statistic": -1.3548636865556842,
+      "pvalue": 0.5263522673586624,
+      "critical_values": {
+        "1%": -3.46448434635489,
+        "5%": -2.8760698997500063,
+        "10%": -2.574439259109618
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "PP",
+      "series": "I(1) sintetica - 1a diferenca",
+      "regression": "c",
+      "lags": "short",
+      "statistic": -12.378913105821116,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4646440771349862,
+        "5%": -2.8761415263748593,
+        "10%": -2.574476900316294
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "PP",
+      "series": "I(1) com drift - nivel",
+      "regression": "ct",
+      "lags": "short",
+      "statistic": -2.0677744727587952,
+      "pvalue": 0.40737149275787654,
+      "critical_values": {
+        "1%": -4.006972823918588,
+        "5%": -3.4333467235675865,
+        "10%": -3.14024216307669
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "PP",
+      "series": "I(1) com drift - 1a diferenca",
+      "regression": "c",
+      "lags": "short",
+      "statistic": -12.378913105821123,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4646440771349862,
+        "5%": -2.8761415263748593,
+        "10%": -2.574476900316294
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "PP",
+      "series": "I(2) sintetica - nivel",
+      "regression": "c",
+      "lags": "short",
+      "statistic": 5.342856913026156,
+      "pvalue": 0.99,
+      "critical_values": {
+        "1%": -3.46448434635489,
+        "5%": -2.8760698997500063,
+        "10%": -2.574439259109618
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "PP",
+      "series": "I(2) sintetica - 1a diferenca",
+      "regression": "c",
+      "lags": "short",
+      "statistic": -1.2976300697356984,
+      "pvalue": 0.5463672396444313,
+      "critical_values": {
+        "1%": -3.4646440771349862,
+        "5%": -2.8761415263748593,
+        "10%": -2.574476900316294
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "PP",
+      "series": "I(2) sintetica - 2a diferenca",
+      "regression": "c",
+      "lags": "short",
+      "statistic": -12.248184851895033,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4648054678038602,
+        "5%": -2.876213891107733,
+        "10%": -2.5745149295266563
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    }
+  ],
+  "specification_comparison": [
+    {
+      "series": "I(0) sintetica",
+      "regression": "n",
+      "statistic": -6.640672834679463,
+      "pvalue": 0.005,
+      "lags_used": 2,
+      "reject_at_5pct": true
+    },
+    {
+      "series": "I(0) sintetica",
+      "regression": "c",
+      "statistic": -6.664868655835712,
+      "pvalue": 0.005,
+      "lags_used": 2,
+      "reject_at_5pct": true
+    },
+    {
+      "series": "I(0) sintetica",
+      "regression": "ct",
+      "statistic": -6.650062895790201,
+      "pvalue": 0.005,
+      "lags_used": 2,
+      "reject_at_5pct": true
+    },
+    {
+      "series": "I(1) sintetica",
+      "regression": "n",
+      "statistic": -0.726872612159457,
+      "pvalue": 0.5953134220864245,
+      "lags_used": 3,
+      "reject_at_5pct": false
+    },
+    {
+      "series": "I(1) sintetica",
+      "regression": "c",
+      "statistic": -1.3020945609388257,
+      "pvalue": 0.5448200350619107,
+      "lags_used": 3,
+      "reject_at_5pct": false
+    },
+    {
+      "series": "I(1) sintetica",
+      "regression": "ct",
+      "statistic": -1.8277235663150213,
+      "pvalue": 0.4762025935341456,
+      "lags_used": 3,
+      "reject_at_5pct": false
+    },
+    {
+      "series": "I(1) com drift",
+      "regression": "n",
+      "statistic": 4.735021790987181,
+      "pvalue": 0.99,
+      "lags_used": 1,
+      "reject_at_5pct": false
+    },
+    {
+      "series": "I(1) com drift",
+      "regression": "c",
+      "statistic": 0.04402559746178757,
+      "pvalue": 0.99,
+      "lags_used": 3,
+      "reject_at_5pct": false
+    },
+    {
+      "series": "I(1) com drift",
+      "regression": "ct",
+      "statistic": -1.8277235663146552,
+      "pvalue": 0.47620259353425054,
+      "lags_used": 3,
+      "reject_at_5pct": false
+    }
+  ],
+  "lag_selection": [
+    {
+      "method": "AIC",
+      "lags": 3,
+      "statistic": -1.3020945609388257,
+      "pvalue": 0.5448200350619107
+    },
+    {
+      "method": "BIC",
+      "lags": 0,
+      "statistic": -1.327137070833201,
+      "pvalue": 0.5360452341132422
+    },
+    {
+      "method": "t-sig",
+      "lags": 3,
+      "statistic": -1.3020945609388257,
+      "pvalue": 0.5448200350619107
+    },
+    {
+      "method": "fixed_1",
+      "lags": 1,
+      "statistic": -1.4277215529295466,
+      "pvalue": 0.5008891330589426
+    },
+    {
+      "method": "fixed_4",
+      "lags": 4,
+      "statistic": -1.1270614066288496,
+      "pvalue": 0.6060132259614157
+    },
+    {
+      "method": "fixed_8",
+      "lags": 8,
+      "statistic": -0.8737385615798343,
+      "pvalue": 0.6945861862612535
+    },
+    {
+      "method": "fixed_12",
+      "lags": 12,
+      "statistic": -0.7529870281078398,
+      "pvalue": 0.7368116819039311
+    }
+  ],
+  "lag_sensitivity": [
+    {
+      "maxlag": 1,
+      "lags_used": 1,
+      "statistic": -1.4277215529295466,
+      "pvalue": 0.5008891330589426,
+      "reject_at_5pct": false
+    },
+    {
+      "maxlag": 4,
+      "lags_used": 4,
+      "statistic": -1.1270614066288496,
+      "pvalue": 0.6060132259614157,
+      "reject_at_5pct": false
+    },
+    {
+      "maxlag": 8,
+      "lags_used": 8,
+      "statistic": -0.8737385615798343,
+      "pvalue": 0.6945861862612535,
+      "reject_at_5pct": false
+    },
+    {
+      "maxlag": 12,
+      "lags_used": 12,
+      "statistic": -0.7529870281078398,
+      "pvalue": 0.7368116819039311,
+      "reject_at_5pct": false
+    },
+    {
+      "maxlag": "auto_AIC",
+      "lags_used": 3,
+      "statistic": -1.3020945609388257,
+      "pvalue": 0.5448200350619107,
+      "reject_at_5pct": false
+    },
+    {
+      "maxlag": "auto_BIC",
+      "lags_used": 0,
+      "statistic": -1.327137070833201,
+      "pvalue": 0.5360452341132422,
+      "reject_at_5pct": false
+    },
+    {
+      "maxlag": "auto_t-sig",
+      "lags_used": 3,
+      "statistic": -1.3020945609388257,
+      "pvalue": 0.5448200350619107,
+      "reject_at_5pct": false
+    }
+  ],
+  "pp_bandwidth": [
+    {
+      "regression": "c",
+      "lags": "short",
+      "statistic": -1.3548636865556842,
+      "pvalue": 0.5263522673586624,
+      "lags_used": 4,
+      "reject_at_5pct": false
+    },
+    {
+      "regression": "c",
+      "lags": "long",
+      "statistic": -1.170218272521662,
+      "pvalue": 0.5909025852745313,
+      "lags_used": 13,
+      "reject_at_5pct": false
+    },
+    {
+      "regression": "ct",
+      "lags": "short",
+      "statistic": -2.067774472758831,
+      "pvalue": 0.4073714927578662,
+      "lags_used": 4,
+      "reject_at_5pct": false
+    },
+    {
+      "regression": "ct",
+      "lags": "long",
+      "statistic": -1.8305019000194602,
+      "pvalue": 0.4753743104947665,
+      "lags_used": 13,
+      "reject_at_5pct": false
+    }
+  ],
+  "gdp_us_results": [
+    {
+      "test": "ADF",
+      "series": "Log PIB EUA (nivel)",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": 0.14400321508683447,
+      "pvalue": 0.99,
+      "critical_values": {
+        "1%": -3.4649685443565184,
+        "5%": -2.8762870054144107,
+        "10%": -2.5745533527696796
+      },
+      "lags_used": 3,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "PP",
+      "series": "Log PIB EUA (nivel)",
+      "regression": "c",
+      "lags": "short",
+      "statistic": 0.004817796205432275,
+      "pvalue": 0.99,
+      "critical_values": {
+        "1%": -3.46448434635489,
+        "5%": -2.8760698997500063,
+        "10%": -2.574439259109618
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "Log PIB EUA (nivel)",
+      "regression": "ct",
+      "autolag": "AIC",
+      "statistic": -1.827731598682648,
+      "pvalue": 0.47620029158137334,
+      "critical_values": {
+        "1%": -4.0076522490628905,
+        "5%": -3.4336712723865057,
+        "10%": -3.1404340483132027
+      },
+      "lags_used": 3,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "PP",
+      "series": "Log PIB EUA (nivel)",
+      "regression": "ct",
+      "lags": "short",
+      "statistic": -2.0677790426046156,
+      "pvalue": 0.40737018303046546,
+      "critical_values": {
+        "1%": -4.006972823918588,
+        "5%": -3.4333467235675865,
+        "10%": -3.14024216307669
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "Log PIB EUA (1a diferenca)",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": -9.13419745978726,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4649685443565184,
+        "5%": -2.8762870054144107,
+        "10%": -2.5745533527696796
+      },
+      "lags_used": 2,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "PP",
+      "series": "Log PIB EUA (1a diferenca)",
+      "regression": "c",
+      "lags": "short",
+      "statistic": -12.378802322098915,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4646440771349862,
+        "5%": -2.8761415263748593,
+        "10%": -2.574476900316294
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    }
+  ],
+  "gdp_brazil_results": [
+    {
+      "test": "ADF",
+      "series": "Log PIB Brasil (nivel)",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": 0.09381381429378707,
+      "pvalue": 0.99,
+      "critical_values": {
+        "1%": -3.4860772968010734,
+        "5%": -2.885698757149919,
+        "10%": -2.579500395452299
+      },
+      "lags_used": 0,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "Log PIB Brasil (nivel)",
+      "regression": "ct",
+      "autolag": "AIC",
+      "statistic": -2.269662745248251,
+      "pvalue": 0.3512684442627567,
+      "critical_values": {
+        "1%": -4.037343323211638,
+        "5%": -3.447800268342631,
+        "10%": -3.1487546006637945
+      },
+      "lags_used": 0,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "PP",
+      "series": "Log PIB Brasil (nivel)",
+      "regression": "c",
+      "lags": "short",
+      "statistic": 0.08840209065957914,
+      "pvalue": 0.99,
+      "critical_values": {
+        "1%": -3.4860772968010734,
+        "5%": -2.885698757149919,
+        "10%": -2.579500395452299
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "PP",
+      "series": "Log PIB Brasil (nivel)",
+      "regression": "ct",
+      "lags": "short",
+      "statistic": -2.3845262566829466,
+      "pvalue": 0.3184373178645823,
+      "critical_values": {
+        "1%": -4.037343323211638,
+        "5%": -3.447800268342631,
+        "10%": -3.1487546006637945
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "ADF",
+      "series": "Log PIB Brasil (1a diferenca)",
+      "regression": "c",
+      "autolag": "AIC",
+      "statistic": -10.693727571740755,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4865396725079005,
+        "5%": -2.885903792013789,
+        "10%": -2.579608187302499
+      },
+      "lags_used": 0,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "PP",
+      "series": "Log PIB Brasil (1a diferenca)",
+      "regression": "c",
+      "lags": "short",
+      "statistic": -10.693592717640644,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": -3.4865396725079005,
+        "5%": -2.885903792013789,
+        "10%": -2.579608187302499
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    }
+  ],
+  "trend_vs_difference": [
+    {
+      "series": "trend_stationary",
+      "test": "ADF",
+      "regression": "ct",
+      "statistic": -7.751796532145107,
+      "pvalue": 0.005,
+      "reject_at_5pct": true
+    },
+    {
+      "series": "difference_stationary",
+      "test": "ADF",
+      "regression": "ct",
+      "statistic": -2.747726397693332,
+      "pvalue": 0.21249584283618028,
+      "reject_at_5pct": false
+    }
+  ],
+  "summary_table": [
+    {
+      "Serie": "I(0) sintetica",
+      "Espec.": "c",
+      "ADF stat": "-6.6649",
+      "ADF p": "0.0050",
+      "ADF rejeita": "Sim",
+      "PP stat": "-6.1513",
+      "PP p": "0.0050",
+      "PP rejeita": "Sim",
+      "Decisao Final": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "Serie": "I(1) sintetica - nivel",
+      "Espec.": "ct",
+      "ADF stat": "-1.8277",
+      "ADF p": "0.4762",
+      "ADF rejeita": "Nao",
+      "PP stat": "-2.0678",
+      "PP p": "0.4074",
+      "PP rejeita": "Nao",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "I(1) sintetica - 1a diff",
+      "Espec.": "c",
+      "ADF stat": "-9.1342",
+      "ADF p": "0.0050",
+      "ADF rejeita": "Sim",
+      "PP stat": "-12.3789",
+      "PP p": "0.0050",
+      "PP rejeita": "Sim",
+      "Decisao Final": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "Serie": "I(1) com drift - nivel",
+      "Espec.": "ct",
+      "ADF stat": "-1.8277",
+      "ADF p": "0.4762",
+      "ADF rejeita": "Nao",
+      "PP stat": "-2.0678",
+      "PP p": "0.4074",
+      "PP rejeita": "Nao",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "I(1) com drift - 1a diff",
+      "Espec.": "c",
+      "ADF stat": "-9.1342",
+      "ADF p": "0.0050",
+      "ADF rejeita": "Sim",
+      "PP stat": "-12.3789",
+      "PP p": "0.0050",
+      "PP rejeita": "Sim",
+      "Decisao Final": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "Serie": "I(2) sintetica - nivel",
+      "Espec.": "ct",
+      "ADF stat": "-1.8560",
+      "ADF p": "0.4681",
+      "ADF rejeita": "Nao",
+      "PP stat": "0.4576",
+      "PP p": "0.9900",
+      "PP rejeita": "Nao",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "I(2) sintetica - 1a diff",
+      "Espec.": "c",
+      "ADF stat": "-1.1658",
+      "ADF p": "0.5925",
+      "ADF rejeita": "Nao",
+      "PP stat": "-1.2976",
+      "PP p": "0.5464",
+      "PP rejeita": "Nao",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "I(2) sintetica - 2a diff",
+      "Espec.": "c",
+      "ADF stat": "-9.1874",
+      "ADF p": "0.0050",
+      "ADF rejeita": "Sim",
+      "PP stat": "-12.2482",
+      "PP p": "0.0050",
+      "PP rejeita": "Sim",
+      "Decisao Final": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "Serie": "Log PIB EUA - nivel",
+      "Espec.": "ct",
+      "ADF stat": "-1.8277",
+      "ADF p": "0.4762",
+      "ADF rejeita": "Nao",
+      "PP stat": "-2.0678",
+      "PP p": "0.4074",
+      "PP rejeita": "Nao",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "Log PIB EUA - 1a diff",
+      "Espec.": "c",
+      "ADF stat": "-9.1342",
+      "ADF p": "0.0050",
+      "ADF rejeita": "Sim",
+      "PP stat": "-12.3788",
+      "PP p": "0.0050",
+      "PP rejeita": "Sim",
+      "Decisao Final": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "Serie": "Log PIB Brasil - nivel",
+      "Espec.": "ct",
+      "ADF stat": "-2.2697",
+      "ADF p": "0.3513",
+      "ADF rejeita": "Nao",
+      "PP stat": "-2.3845",
+      "PP p": "0.3184",
+      "PP rejeita": "Nao",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "Log PIB Brasil - 1a diff",
+      "Espec.": "c",
+      "ADF stat": "-10.6937",
+      "ADF p": "0.0050",
+      "ADF rejeita": "Sim",
+      "PP stat": "-10.6936",
+      "PP p": "0.0050",
+      "PP rejeita": "Sim",
+      "Decisao Final": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "Serie": "Trend-stationary",
+      "Espec.": "ct",
+      "ADF stat": "-7.7518",
+      "ADF p": "0.0050",
+      "ADF rejeita": "Sim",
+      "PP stat": "-7.5466",
+      "PP p": "0.0050",
+      "PP rejeita": "Sim",
+      "Decisao Final": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "Serie": "Difference-stationary",
+      "Espec.": "ct",
+      "ADF stat": "-2.7477",
+      "ADF p": "0.2125",
+      "ADF rejeita": "Nao",
+      "PP stat": "-2.7798",
+      "PP p": "0.2033",
+      "PP rejeita": "Nao",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    }
+  ]
+}

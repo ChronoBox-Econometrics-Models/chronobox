@@ -1,23 +1,30 @@
-site_name: ChronoBox
-site_description: "Time series analysis library for Python with ARIMA, VAR, SVAR, VECM, and more"
-site_author: NodesEcon
-site_url: https://nodesecon.github.io/chronobox/
+site_name: ChronoBox Documentation
+site_description: Biblioteca Python de econometria de series temporais
+site_author: NodesEcon Development Team
+site_url: https://chronobox.readthedocs.io/
 
-repo_name: nodesecon/chronobox
-repo_url: https://github.com/nodesecon/chronobox
+repo_name: NodesEcon/chronobox
+repo_url: https://github.com/NodesEcon/chronobox
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2024-2026 NodesEcon Development Team
 
 theme:
   name: material
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: teal
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: teal
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -32,110 +39,276 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.footer
+    - navigation.indexes
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
+    - toc.integrate
   icon:
     repo: fontawesome/brands/github
-  logo: assets/logo.png
-  favicon: assets/favicon.ico
+    edit: material/pencil
+    view: material/eye
+  logo: assets/images/logo.svg
+  favicon: assets/images/logo.svg
 
 plugins:
-  - search
+  - search:
+      lang: en
   - mkdocstrings:
       handlers:
         python:
           options:
             docstring_style: numpy
-            show_source: true
+            docstring_section_style: table
             show_root_heading: true
-            show_category_heading: true
+            show_source: true
+            show_signature_annotations: true
+            separate_signature: true
+            merge_init_into_class: true
+            inherited_members: false
             members_order: source
-  - autorefs
+            group_by_category: true
+            show_category_heading: true
+            show_if_no_docstring: false
+            annotations_path: brief
 
 markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.arithmatex:
-      generic: true
-  - admonition
-  - pymdownx.details
-  - attr_list
-  - md_in_html
-  - tables
-  - footnotes
-  - toc:
-      permalink: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.snippets
+
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/NodesEcon/chronobox
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/chronobox/
+
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: info
+    unrecognized_links: info
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: info
+
+not_in_nav: |
+  /404.md
+
+extra_css:
+  - stylesheets/extra.css
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/nodesecon/chronobox
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/chronobox/
-  version:
-    provider: mike
-
 nav:
   - Home: index.md
+
   - Getting Started:
+    - getting-started/index.md
     - Installation: getting-started/installation.md
     - Quick Start: getting-started/quickstart.md
-    - Concepts: getting-started/concepts.md
+    - Core Concepts: getting-started/core-concepts.md
+    - Choosing a Model: getting-started/choosing-model.md
+
   - User Guide:
-    - ARIMA & SARIMA: user-guide/arima.md
-    - Auto-ARIMA: user-guide/auto-arima.md
-    - VAR: user-guide/var.md
-    - SVAR: user-guide/svar.md
-    - VECM: user-guide/vecm.md
-    - ARDL: user-guide/ardl.md
-    - Unit Root Tests: user-guide/unit-root-tests.md
-    - Cointegration Tests: user-guide/cointegration-tests.md
-    - Diagnostic Tests: user-guide/diagnostic-tests.md
-    - HP Filter: user-guide/hp-filter.md
-    - BK Filter: user-guide/bk-filter.md
-    - CF Filter: user-guide/cf-filter.md
-    - Hamilton Filter: user-guide/hamilton-filter.md
-    - Decomposition: user-guide/decomposition.md
-    - Visualization: user-guide/visualization.md
-    - Reports: user-guide/reports.md
-    - ChronoExperiment: user-guide/experiment.md
-    - Datasets: user-guide/datasets.md
-    - CLI: user-guide/cli.md
-    - Performance: user-guide/performance.md
+    - user-guide/index.md
+    - ARIMA Family:
+      - user-guide/arima/index.md
+      - ARIMA: user-guide/arima/arima.md
+      - SARIMA: user-guide/arima/sarima.md
+      - ARFIMA: user-guide/arima/arfima.md
+      - Auto-ARIMA: user-guide/arima/auto-arima.md
+    - ETS (Exponential Smoothing):
+      - user-guide/ets/index.md
+      - Simple Exponential Smoothing: user-guide/ets/simple.md
+      - Holt Linear Trend: user-guide/ets/holt.md
+      - Holt-Winters Seasonal: user-guide/ets/holt-winters.md
+      - ETS Taxonomy: user-guide/ets/ets-taxonomy.md
+      - Auto-ETS: user-guide/ets/auto-ets.md
+      - Theta Method: user-guide/ets/theta.md
+    - Decomposition:
+      - user-guide/decomposition/index.md
+      - STL Decomposition: user-guide/decomposition/stl.md
+      - X-13 ARIMA-SEATS: user-guide/decomposition/x13.md
+    - VAR & VECM:
+      - user-guide/var/index.md
+      - VAR: user-guide/var/var.md
+      - VECM: user-guide/var/vecm.md
+      - Impulse Response (IRF): user-guide/var/irf.md
+      - Variance Decomposition (FEVD): user-guide/var/fevd.md
+      - Granger Causality: user-guide/var/granger.md
+      - Forecasting: user-guide/var/forecasting.md
+    - SVAR & Advanced Models:
+      - user-guide/svar/index.md
+      - SVAR: user-guide/svar/svar.md
+      - BVAR: user-guide/svar/bvar.md
+      - FAVAR: user-guide/svar/favar.md
+      - TVP-VAR: user-guide/svar/tvp-var.md
+      - GVAR: user-guide/svar/gvar.md
+      - Historical Decomposition: user-guide/svar/hd.md
+    - Economic Filters:
+      - user-guide/filters/index.md
+      - Hodrick-Prescott: user-guide/filters/hp.md
+      - Baxter-King: user-guide/filters/bk.md
+      - Christiano-Fitzgerald: user-guide/filters/cf.md
+      - Hamilton Filter: user-guide/filters/hamilton.md
+      - Beveridge-Nelson: user-guide/filters/bn.md
+    - ARDL & Error Correction:
+      - user-guide/ardl/index.md
+      - ARDL: user-guide/ardl/ardl.md
+      - Error Correction Model: user-guide/ardl/ecm.md
+    - Spillover Analysis:
+      - user-guide/spillover/index.md
+      - Static Spillover: user-guide/spillover/static.md
+      - Dynamic Spillover: user-guide/spillover/dynamic.md
+    - Experiment Workflow: user-guide/experiment.md
+
+  - Theory:
+    - ARIMA Foundations: theory/arima-theory.md
+    - ETS & State-Space: theory/ets-theory.md
+    - VAR Algebra: theory/var-theory.md
+    - VECM & Cointegration: theory/vecm-theory.md
+    - SVAR Identification: theory/svar-theory.md
+    - Bayesian VAR: theory/bvar-theory.md
+    - Filter Theory: theory/filters-theory.md
+    - ARDL & Bounds Test: theory/ardl-theory.md
+    - Spillover Framework: theory/spillover-theory.md
+    - References: theory/references.md
+
+  - Diagnostics:
+    - diagnostics/index.md
+    - Unit Root Tests:
+      - diagnostics/unit-root/index.md
+      - ADF Test: diagnostics/unit-root/adf.md
+      - Phillips-Perron: diagnostics/unit-root/pp.md
+      - KPSS Test: diagnostics/unit-root/kpss.md
+      - Zivot-Andrews: diagnostics/unit-root/zivot-andrews.md
+      - Lee-Strazicich: diagnostics/unit-root/lee-strazicich.md
+    - Cointegration Tests:
+      - diagnostics/cointegration/index.md
+      - Johansen: diagnostics/cointegration/johansen.md
+      - Engle-Granger: diagnostics/cointegration/engle-granger.md
+      - Bounds Test: diagnostics/cointegration/bounds-test.md
+    - Structural Breaks:
+      - diagnostics/structural-breaks/index.md
+      - CUSUM: diagnostics/structural-breaks/cusum.md
+      - Chow Test: diagnostics/structural-breaks/chow.md
+      - Bai-Perron: diagnostics/structural-breaks/bai-perron.md
+    - Specification Tests:
+      - diagnostics/specification/index.md
+      - Ljung-Box: diagnostics/specification/ljung-box.md
+      - Breusch-Godfrey: diagnostics/specification/breusch-godfrey.md
+      - ARCH Test: diagnostics/specification/arch-test.md
+      - Jarque-Bera: diagnostics/specification/jarque-bera.md
+      - Lag Selection: diagnostics/specification/lag-selection.md
+    - VAR Stability:
+      - diagnostics/var-stability/index.md
+      - Eigenvalue Stability: diagnostics/var-stability/eigenvalue.md
+      - Granger Causality: diagnostics/var-stability/granger-causality.md
+      - Portmanteau Test: diagnostics/var-stability/portmanteau.md
+
+  - Visualization:
+    - visualization/index.md
+    - Time Series Plots: visualization/time-series-plots.md
+    - ACF & PACF: visualization/acf-pacf.md
+    - IRF Plots: visualization/irf-plots.md
+    - FEVD Plots: visualization/fevd-plots.md
+    - Forecast Plots: visualization/forecast-plots.md
+    - Filter Plots: visualization/filter-plots.md
+    - Spillover Plots: visualization/spillover-plots.md
+    - Diagnostic Plots: visualization/diagnostic-plots.md
+    - Themes: visualization/themes.md
+
+  - Tutorials:
+    - tutorials/index.md
+    - Fundamentals: tutorials/fundamentals.md
+    - ETS Tutorial: tutorials/ets.md
+    - VAR Tutorial: tutorials/var.md
+    - SVAR Tutorial: tutorials/svar.md
+    - BVAR Tutorial: tutorials/bvar.md
+    - VECM Tutorial: tutorials/vecm.md
+    - Filters Tutorial: tutorials/filters.md
+    - ARDL Tutorial: tutorials/ardl.md
+    - Spillover Tutorial: tutorials/spillover.md
+    - Complete Workflow: tutorials/complete-workflow.md
+
   - API Reference:
+    - api/index.md
     - Core: api/core.md
-    - Models: api/models.md
-    - Testing: api/testing.md
+    - ARIMA: api/arima.md
+    - ETS: api/ets.md
+    - Decomposition: api/decomposition.md
+    - VAR & VECM: api/var.md
+    - SVAR & Advanced: api/svar.md
     - Filters: api/filters.md
+    - ARDL & ECM: api/ardl.md
+    - Spillover: api/spillover.md
+    - Diagnostics: api/diagnostics.md
+    - Visualization: api/visualization.md
+    - Reports: api/reports.md
     - Experiment: api/experiment.md
     - Datasets: api/datasets.md
-  - Theory:
-    - ARIMA Theory: theory/arima-theory.md
-    - VAR/SVAR Theory: theory/var-theory.md
-    - Cointegration: theory/cointegration-theory.md
-    - Filters: theory/filters-theory.md
-  - Examples:
-    - Airline Analysis: examples/airline-analysis.md
-    - Macro VAR: examples/macro-var.md
-    - Cointegration: examples/cointegration-analysis.md
-    - Business Cycles: examples/business-cycle.md
-  - Benchmarks: benchmarks.md
+    - CLI: api/cli.md
+
+  - FAQ:
+    - General: faq/general.md
+    - Advanced: faq/advanced.md
+    - Troubleshooting: faq/troubleshooting.md
+
+  - Benchmarks:
+    - benchmarks/index.md
+    - ARIMA: benchmarks/arima.md
+    - VAR: benchmarks/var.md
+    - ETS: benchmarks/ets.md
+    - R/Stata Comparison: benchmarks/comparison.md
+
+  - Contributing:
+    - How to Contribute: contributing/contributing.md
+    - Code of Conduct: contributing/code-of-conduct.md
+    - Changelog: contributing/changelog.md
+    - Roadmap: contributing/roadmap.md

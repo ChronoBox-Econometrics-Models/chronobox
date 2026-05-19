@@ -1,0 +1,51 @@
+horizon,response_variable,Supply shock,Demand shock
+0,GDP growth,0.658375,-0.149251
+0,Unemployment,-0.041549,0.305591
+1,GDP growth,0.252933,-0.076409
+1,Unemployment,-0.111854,0.260298
+2,GDP growth,0.170098,-0.015572
+2,Unemployment,-0.141855,0.194908
+3,GDP growth,0.094981,0.000449
+3,Unemployment,-0.137550,0.180447
+4,GDP growth,0.046196,0.007525
+4,Unemployment,-0.124350,0.173842
+5,GDP growth,0.020950,0.012900
+5,Unemployment,-0.117281,0.158234
+6,GDP growth,0.006736,0.016126
+6,Unemployment,-0.109513,0.141686
+7,GDP growth,-0.001634,0.016865
+7,Unemployment,-0.100182,0.128025
+8,GDP growth,-0.006150,0.016421
+8,Unemployment,-0.090996,0.116014
+9,GDP growth,-0.008293,0.015595
+9,Unemployment,-0.082589,0.104797
+10,GDP growth,-0.009105,0.014573
+10,Unemployment,-0.074832,0.094510
+11,GDP growth,-0.009197,0.013436
+11,Unemployment,-0.067662,0.085245
+12,GDP growth,-0.008888,0.012283
+12,Unemployment,-0.061107,0.076893
+13,GDP growth,-0.008369,0.011177
+13,Unemployment,-0.055157,0.069342
+14,GDP growth,-0.007757,0.010140
+14,Unemployment,-0.049768,0.062521
+15,GDP growth,-0.007121,0.009179
+15,Unemployment,-0.044891,0.056368
+16,GDP growth,-0.006497,0.008297
+16,Unemployment,-0.040483,0.050819
+17,GDP growth,-0.005903,0.007493
+17,Unemployment,-0.036504,0.045815
+18,GDP growth,-0.005349,0.006763
+18,Unemployment,-0.032913,0.041303
+19,GDP growth,-0.004838,0.006102
+19,Unemployment,-0.029674,0.037235
+20,GDP growth,-0.004372,0.005504
+20,Unemployment,-0.026752,0.033567
+21,GDP growth,-0.003947,0.004963
+21,Unemployment,-0.024118,0.030260
+22,GDP growth,-0.003562,0.004475
+22,Unemployment,-0.021742,0.027279
+23,GDP growth,-0.003213,0.004035
+23,Unemployment,-0.019601,0.024592
+24,GDP growth,-0.002898,0.003638
+24,Unemployment,-0.017670,0.022169

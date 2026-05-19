@@ -1,0 +1,676 @@
+{
+  "metadata": {
+    "notebook": "02_kpss_ers_za_solution",
+    "tests": [
+      "KPSS",
+      "ERS",
+      "Zivot-Andrews"
+    ],
+    "seed": 42,
+    "n_synthetic": 200
+  },
+  "kpss_results": [
+    {
+      "test": "KPSS",
+      "series": "I(0) sintetica",
+      "regression": "c",
+      "statistic": 0.18297022898725618,
+      "pvalue": 0.15,
+      "critical_values": {
+        "1%": 0.739,
+        "5%": 0.463,
+        "10%": 0.347
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (serie e estacionaria)"
+    },
+    {
+      "test": "KPSS",
+      "series": "I(1) sintetica",
+      "regression": "c",
+      "statistic": 3.0475106432855235,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": 0.739,
+        "5%": 0.463,
+        "10%": 0.347
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (evidencia de raiz unitaria)"
+    },
+    {
+      "test": "KPSS",
+      "series": "Near UR (phi=0.95)",
+      "regression": "c",
+      "statistic": 0.6794452100767934,
+      "pvalue": 0.015414071811200601,
+      "critical_values": {
+        "1%": 0.739,
+        "5%": 0.463,
+        "10%": 0.347
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (evidencia de raiz unitaria)"
+    },
+    {
+      "test": "KPSS",
+      "series": "Com quebra estrutural",
+      "regression": "c",
+      "statistic": 3.136012699157955,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": 0.739,
+        "5%": 0.463,
+        "10%": 0.347
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (evidencia de raiz unitaria)"
+    },
+    {
+      "test": "KPSS",
+      "series": "I(0) (level)",
+      "regression": "c",
+      "statistic": 0.18297022898725618,
+      "pvalue": 0.15,
+      "critical_values": {
+        "1%": 0.739,
+        "5%": 0.463,
+        "10%": 0.347
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (serie e estacionaria)"
+    },
+    {
+      "test": "KPSS",
+      "series": "I(0) (trend)",
+      "regression": "ct",
+      "statistic": 0.1852232913027839,
+      "pvalue": 0.021541265761456038,
+      "critical_values": {
+        "1%": 0.216,
+        "5%": 0.146,
+        "10%": 0.119
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (evidencia de raiz unitaria)"
+    },
+    {
+      "test": "KPSS",
+      "series": "Trend-stationary (level)",
+      "regression": "c",
+      "statistic": 3.867544139340084,
+      "pvalue": 0.005,
+      "critical_values": {
+        "1%": 0.739,
+        "5%": 0.463,
+        "10%": 0.347
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (evidencia de raiz unitaria)"
+    },
+    {
+      "test": "KPSS",
+      "series": "Trend-stationary (trend)",
+      "regression": "ct",
+      "statistic": 0.12296220305022072,
+      "pvalue": 0.09266258694403569,
+      "critical_values": {
+        "1%": 0.216,
+        "5%": 0.146,
+        "10%": 0.119
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (serie e estacionaria)"
+    }
+  ],
+  "ers_results": [
+    {
+      "test": "ERS",
+      "series": "I(0) sintetica",
+      "regression": "c",
+      "statistic": -5.257088750438055,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -2.5658,
+        "5%": -1.9393,
+        "10%": -1.6156
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "ERS",
+      "series": "I(1) sintetica",
+      "regression": "c",
+      "statistic": -0.7604507836634191,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -2.5658,
+        "5%": -1.9393,
+        "10%": -1.6156
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    },
+    {
+      "test": "ERS",
+      "series": "Near UR (phi=0.95)",
+      "regression": "c",
+      "statistic": -2.271674897040706,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -2.5658,
+        "5%": -1.9393,
+        "10%": -1.6156
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "ERS",
+      "series": "Trend-stationary",
+      "regression": "ct",
+      "statistic": -6.29214674002073,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.48,
+        "5%": -2.89,
+        "10%": -2.57
+      },
+      "lags_used": 4,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "test": "ERS",
+      "series": "Difference-stationary",
+      "regression": "ct",
+      "statistic": -1.8293347910717903,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -3.48,
+        "5%": -2.89,
+        "10%": -2.57
+      },
+      "lags_used": 0,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)"
+    }
+  ],
+  "za_results": [
+    {
+      "test": "Zivot-Andrews",
+      "series": "Quebra estrutural (model=a)",
+      "model": "a",
+      "statistic": -12.014719580116546,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -5.34,
+        "5%": -4.8,
+        "10%": -4.58
+      },
+      "lags_used": 0,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria com quebra)",
+      "break_index": null
+    },
+    {
+      "test": "Zivot-Andrews",
+      "series": "Quebra estrutural (model=b)",
+      "model": "b",
+      "statistic": -3.8317871236842214,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -4.93,
+        "5%": -4.42,
+        "10%": -4.11
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)",
+      "break_index": null
+    },
+    {
+      "test": "Zivot-Andrews",
+      "series": "Quebra estrutural (model=c)",
+      "model": "c",
+      "statistic": -12.142103790497544,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -5.57,
+        "5%": -5.08,
+        "10%": -4.82
+      },
+      "lags_used": 0,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria com quebra)",
+      "break_index": null
+    },
+    {
+      "test": "Zivot-Andrews",
+      "series": "I(0) sintetica (sem quebra)",
+      "model": "c",
+      "statistic": -6.67564167908419,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -5.57,
+        "5%": -5.08,
+        "10%": -4.82
+      },
+      "lags_used": 5,
+      "reject_at_5pct": true,
+      "decision": "Rejeita H0 (estacionaria com quebra)",
+      "break_index": null
+    },
+    {
+      "test": "Zivot-Andrews",
+      "series": "I(1) sintetica (sem quebra)",
+      "model": "c",
+      "statistic": -3.6370297285059032,
+      "pvalue": null,
+      "critical_values": {
+        "1%": -5.57,
+        "5%": -5.08,
+        "10%": -4.82
+      },
+      "lags_used": 4,
+      "reject_at_5pct": false,
+      "decision": "Nao rejeita H0 (raiz unitaria)",
+      "break_index": null
+    }
+  ],
+  "battery_results": {
+    "I(0) sintetica": {
+      "ADF": {
+        "statistic": -6.664868655835712,
+        "pvalue": 0.005,
+        "reject_at_5pct": true
+      },
+      "KPSS": {
+        "statistic": 0.18297022898725618,
+        "pvalue": 0.15,
+        "reject_at_5pct": false
+      },
+      "ERS": {
+        "statistic": -5.257088750438055,
+        "pvalue": null,
+        "reject_at_5pct": true
+      },
+      "ZA": {
+        "statistic": -6.67564167908419,
+        "pvalue": null,
+        "reject_at_5pct": true,
+        "break_index": null
+      },
+      "conclusion": "ESTACIONARIA"
+    },
+    "I(1) sintetica": {
+      "ADF": {
+        "statistic": -1.3020945609388257,
+        "pvalue": 0.5448200350619107,
+        "reject_at_5pct": false
+      },
+      "KPSS": {
+        "statistic": 3.0475106432855235,
+        "pvalue": 0.005,
+        "reject_at_5pct": true
+      },
+      "ERS": {
+        "statistic": -0.7604507836634191,
+        "pvalue": null,
+        "reject_at_5pct": false
+      },
+      "ZA": {
+        "statistic": -3.6370297285059032,
+        "pvalue": null,
+        "reject_at_5pct": false,
+        "break_index": null
+      },
+      "conclusion": "RAIZ UNITARIA"
+    },
+    "Near UR (phi=0.95)": {
+      "ADF": {
+        "statistic": -2.561292845155734,
+        "pvalue": 0.10463554458473812,
+        "reject_at_5pct": false
+      },
+      "KPSS": {
+        "statistic": 0.6794452100767934,
+        "pvalue": 0.015414071811200601,
+        "reject_at_5pct": true
+      },
+      "ERS": {
+        "statistic": -2.271674897040706,
+        "pvalue": null,
+        "reject_at_5pct": true
+      },
+      "ZA": {
+        "statistic": -4.672422196651613,
+        "pvalue": null,
+        "reject_at_5pct": false,
+        "break_index": null
+      },
+      "conclusion": "RAIZ UNITARIA"
+    },
+    "Quebra estrutural": {
+      "ADF": {
+        "statistic": -1.5786542602879226,
+        "pvalue": 0.4481668503348417,
+        "reject_at_5pct": false
+      },
+      "KPSS": {
+        "statistic": 3.136012699157955,
+        "pvalue": 0.005,
+        "reject_at_5pct": true
+      },
+      "ERS": {
+        "statistic": -1.033307067271078,
+        "pvalue": null,
+        "reject_at_5pct": false
+      },
+      "ZA": {
+        "statistic": -12.142103790497544,
+        "pvalue": null,
+        "reject_at_5pct": true,
+        "break_index": null
+      },
+      "conclusion": "RAIZ UNITARIA"
+    },
+    "Log PIB EUA (nivel)": {
+      "ADF": {
+        "statistic": 0.14400321508683447,
+        "pvalue": 0.99,
+        "reject_at_5pct": false
+      },
+      "KPSS": {
+        "statistic": 4.045755463880764,
+        "pvalue": 0.005,
+        "reject_at_5pct": true
+      },
+      "ERS": {
+        "statistic": 5.343349890959329,
+        "pvalue": null,
+        "reject_at_5pct": false
+      },
+      "ZA": {
+        "statistic": -3.9397101346085894,
+        "pvalue": null,
+        "reject_at_5pct": false,
+        "break_index": null
+      },
+      "conclusion": "RAIZ UNITARIA"
+    },
+    "Log PIB EUA (1a diff)": {
+      "ADF": {
+        "statistic": -9.13419745978726,
+        "pvalue": 0.005,
+        "reject_at_5pct": true
+      },
+      "KPSS": {
+        "statistic": 0.08453934823278852,
+        "pvalue": 0.15,
+        "reject_at_5pct": false
+      },
+      "ERS": {
+        "statistic": -5.4936501616006215,
+        "pvalue": null,
+        "reject_at_5pct": true
+      },
+      "ZA": {
+        "statistic": -12.651160903287616,
+        "pvalue": null,
+        "reject_at_5pct": true,
+        "break_index": null
+      },
+      "conclusion": "ESTACIONARIA"
+    },
+    "Log PIB Brasil (nivel)": {
+      "ADF": {
+        "statistic": 0.09381381429378707,
+        "pvalue": 0.99,
+        "reject_at_5pct": false
+      },
+      "KPSS": {
+        "statistic": 2.500772702356849,
+        "pvalue": 0.005,
+        "reject_at_5pct": true
+      },
+      "ERS": {
+        "statistic": 4.434670893637793,
+        "pvalue": null,
+        "reject_at_5pct": false
+      },
+      "ZA": {
+        "statistic": -4.266114744662554,
+        "pvalue": null,
+        "reject_at_5pct": false,
+        "break_index": null
+      },
+      "conclusion": "RAIZ UNITARIA"
+    },
+    "Log PIB Brasil (1a diff)": {
+      "ADF": {
+        "statistic": -10.693727571740755,
+        "pvalue": 0.005,
+        "reject_at_5pct": true
+      },
+      "KPSS": {
+        "statistic": 0.10998566223984191,
+        "pvalue": 0.15,
+        "reject_at_5pct": false
+      },
+      "ERS": {
+        "statistic": -3.4635377576612063,
+        "pvalue": null,
+        "reject_at_5pct": true
+      },
+      "ZA": {
+        "statistic": -11.227772371992208,
+        "pvalue": null,
+        "reject_at_5pct": true,
+        "break_index": null
+      },
+      "conclusion": "ESTACIONARIA"
+    }
+  },
+  "za_brazil_detailed": [
+    {
+      "model": "a",
+      "statistic": -4.746603722461845,
+      "pvalue": null,
+      "reject_at_5pct": false,
+      "break_index": null,
+      "break_date": "N/A"
+    },
+    {
+      "model": "b",
+      "statistic": -3.9883776549039127,
+      "pvalue": null,
+      "reject_at_5pct": false,
+      "break_index": null,
+      "break_date": "N/A"
+    },
+    {
+      "model": "c",
+      "statistic": -4.266114744662554,
+      "pvalue": null,
+      "reject_at_5pct": false,
+      "break_index": null,
+      "break_date": "N/A"
+    }
+  ],
+  "exercise1_sample_size": [
+    {
+      "n": 50,
+      "ADF_stat": -1.3366057186447085,
+      "ADF_p": 0.537028361703629,
+      "ADF_rejeita": false,
+      "KPSS_stat": 1.0677383409427121,
+      "KPSS_rejeita": true,
+      "ERS_stat": -1.0291857442074983,
+      "ERS_rejeita": false
+    },
+    {
+      "n": 100,
+      "ADF_stat": -1.002039452471073,
+      "ADF_p": 0.650733251143571,
+      "ADF_rejeita": false,
+      "KPSS_stat": 0.5888425646058191,
+      "KPSS_rejeita": true,
+      "ERS_stat": -1.0618550740970614,
+      "ERS_rejeita": false
+    },
+    {
+      "n": 200,
+      "ADF_stat": -2.561292845155734,
+      "ADF_p": 0.10463554458473812,
+      "ADF_rejeita": false,
+      "KPSS_stat": 0.6794452100767934,
+      "KPSS_rejeita": true,
+      "ERS_stat": -2.271674897040706,
+      "ERS_rejeita": true
+    },
+    {
+      "n": 500,
+      "ADF_stat": -4.770717148274333,
+      "ADF_p": 0.005,
+      "ADF_rejeita": true,
+      "KPSS_stat": 0.5031285798727461,
+      "KPSS_rejeita": true,
+      "ERS_stat": -4.702445334943475,
+      "ERS_rejeita": true
+    }
+  ],
+  "exercise2_za_brazil": [
+    {
+      "model": "a",
+      "description": "quebra no intercepto",
+      "statistic": -4.746603722461845,
+      "pvalue": null,
+      "reject_at_5pct": false,
+      "break_index": null,
+      "break_date": "N/A"
+    },
+    {
+      "model": "b",
+      "description": "quebra na tendencia",
+      "statistic": -3.9883776549039127,
+      "pvalue": null,
+      "reject_at_5pct": false,
+      "break_index": null,
+      "break_date": "N/A"
+    },
+    {
+      "model": "c",
+      "description": "ambos",
+      "statistic": -4.266114744662554,
+      "pvalue": null,
+      "reject_at_5pct": false,
+      "break_index": null,
+      "break_date": "N/A"
+    }
+  ],
+  "summary_table": [
+    {
+      "Serie": "I(0) sintetica",
+      "ADF rej": "Sim",
+      "KPSS rej": "Nao",
+      "ERS rej": "Sim",
+      "ZA rej": "Sim",
+      "ZA break": "N/A",
+      "Decisao Final": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "Serie": "I(1) sintetica",
+      "ADF rej": "Nao",
+      "KPSS rej": "Sim",
+      "ERS rej": "Nao",
+      "ZA rej": "Nao",
+      "ZA break": "N/A",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "Near UR (phi=0.95)",
+      "ADF rej": "Nao",
+      "KPSS rej": "Sim",
+      "ERS rej": "Sim",
+      "ZA rej": "Nao",
+      "ZA break": "N/A",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "Quebra estrutural",
+      "ADF rej": "Nao",
+      "KPSS rej": "Sim",
+      "ERS rej": "Nao",
+      "ZA rej": "Sim",
+      "ZA break": "N/A",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "Trend-stationary",
+      "ADF rej": "Nao",
+      "KPSS rej": "Sim",
+      "ERS rej": "Nao",
+      "ZA rej": "Sim",
+      "ZA break": "N/A",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "Diff-stationary",
+      "ADF rej": "Nao",
+      "KPSS rej": "Sim",
+      "ERS rej": "Nao",
+      "ZA rej": "Nao",
+      "ZA break": "N/A",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "Log PIB EUA",
+      "ADF rej": "Nao",
+      "KPSS rej": "Sim",
+      "ERS rej": "Nao",
+      "ZA rej": "Nao",
+      "ZA break": "N/A",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "Diff Log PIB EUA",
+      "ADF rej": "Sim",
+      "KPSS rej": "Nao",
+      "ERS rej": "Sim",
+      "ZA rej": "Sim",
+      "ZA break": "N/A",
+      "Decisao Final": "Rejeita H0 (estacionaria)"
+    },
+    {
+      "Serie": "Log PIB Brasil",
+      "ADF rej": "Nao",
+      "KPSS rej": "Sim",
+      "ERS rej": "Nao",
+      "ZA rej": "Nao",
+      "ZA break": "N/A",
+      "Decisao Final": "Nao Rejeita H0 (raiz unitaria)"
+    },
+    {
+      "Serie": "Diff Log PIB Brasil",
+      "ADF rej": "Sim",
+      "KPSS rej": "Nao",
+      "ERS rej": "Sim",
+      "ZA rej": "Sim",
+      "ZA break": "N/A",
+      "Decisao Final": "Rejeita H0 (estacionaria)"
+    }
+  ]
+}

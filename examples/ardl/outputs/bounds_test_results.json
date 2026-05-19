@@ -1,0 +1,38 @@
+{
+  "model": "ARDL(1, 1, 1, 1)",
+  "dataset": "ardl_synthetic.csv",
+  "f_statistic": 12.316246,
+  "k": 3,
+  "critical_values": {
+    "10%": {
+      "I0_lower": 2.72,
+      "I1_upper": 3.77
+    },
+    "5%": {
+      "I0_lower": 3.23,
+      "I1_upper": 4.35
+    },
+    "1%": {
+      "I0_lower": 4.29,
+      "I1_upper": 5.61
+    }
+  },
+  "conclusion_5pct": "reject_h0",
+  "interpretation": {
+    "10%": "Reject H0",
+    "5%": "Reject H0",
+    "1%": "Reject H0"
+  },
+  "johansen_comparison": {
+    "bivariate": {
+      "trace_rank": 1,
+      "max_eig_rank": 1,
+      "trace_stat_r0": 22.8491
+    },
+    "multivariate": {
+      "trace_rank": 1,
+      "max_eig_rank": 2,
+      "trace_stat_r0": 89.4526
+    }
+  }
+}
